@@ -1,0 +1,8 @@
+		<div class="proyecto">
+			<h1>Proyecto</h1>
+			<p>Pàrrafo de intro de proyecto</p>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php endwhile; else : ?>
+				<p><?php _e( 'Pailas, no hay post' ); ?></p>
+			<?php endif; ?>
+		</div>
