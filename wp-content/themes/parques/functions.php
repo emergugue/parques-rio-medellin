@@ -15,7 +15,7 @@ function parques_setup()
 	// Enable support for Post Thumbnails, and declare two sizes.
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 672, 372, true );
-	add_image_size( 'twentyfourteen-full-width', 1038, 576, true );
+	add_image_size( 'parques-full-width', 1038, 576, true );
 
 	// Usamos el nav_menu
 	register_nav_menu( 'main-menu', 'Menú principal' );
@@ -105,7 +105,7 @@ add_filter( 'wp_title', 'parques_wp_title', 10, 2 );
 function parques_styles()
 { 
 	// add general style
-	wp_enqueue_style( 'style', get_template_directory_uri().'style.css',array(),'3.0.2' );
+	wp_enqueue_style( 'style', get_template_directory_uri().'/style.css',array(),'3.0.2' );
 
 	// add css bootstrap
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri().'/bootstrap-3.2.0/css/bootstrap.min.css',array(),'3.0.2' );
@@ -125,6 +125,9 @@ add_action( 'wp_enqueue_scripts', 'parques_styles' );
  **/
 function parques_scripts()
 { 
+	//add jquery
+	wp_enqueue_script('jquery','/wp-includes/js/jquery/jquery.js',false,'1.11.0',true);
+
 	//add scrips boostrap , con la opcion de cargar al final.
 	wp_enqueue_script('bootstrap.min', get_template_directory_uri().'/bootstrap-3.2.0/js/bootstrap.min.js',false,'3.2.0',true);
 } 

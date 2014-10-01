@@ -12,31 +12,79 @@
 	<![endif]-->	
 
 	<meta name="description" content="<?php bloginfo( "description" ); ?>">
-	
+
 	<!-- estilos y js agregados se encuentran en el archivo de funciones -->
 	<?php wp_head(); ?> 
 
 </head>
 <body <?php body_class(); ?> >
 	<header>
-		<div class="main-logo">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img src="<?php echo bloginfo('template_url') .'/images/header.jpg' ?>" alt="">
-			</a>
-		</div>
-		<div class="redes-sociales"></div>
+		<div class="container-fluid">
+			<div class="row">
 
-		<nav class="collapse navbar-collapse" id="nav-bar-main">
-			<?php 
-				wp_nav_menu(
-						array(
-							'theme_location' => 'main-menu',
-							'menu_class' => 'nav-menu' 
-							)
-				); ?> 
+				<div id="main-logo" class="col-sm-9">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img src="<?php echo bloginfo('template_url') .'/images/header.jpg' ?>" alt="">
+					</a>
+				</div>
+
+				<div id="redes-sociales" class="hidden-xs col-sm-3">
+					<a class="item-social" href="#">
+						<img width="45" src="<?php echo bloginfo('template_url') .'/images/icons/32/closed32.png' ?>" >
+					</a>
+					<a class="item-social" href="#">
+						<img src="<?php echo bloginfo('template_url') .'/images/icons/32/fb32.png' ?>" >
+					</a>	
+					<a class="item-social" href="#">
+						<img src="<?php echo bloginfo('template_url') .'/images/icons/32/tw32.png' ?>">
+					</a>
+				</div>
+
+			</div>	
+		</div>
+
+		<nav id="menu-principal" class="navbar navbar-default" role="navigation">
+			 <div class="container-fluid">
+			 	<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-inicio">
+				    <span class="sr-only">Toggle navigation</span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+				  </button>
+				  <span class="hidden-sm hidden-md hidden-lg navbar-brand collapsed" data-toggle="collapse" data-target="#barra-inicio" >Menú</span>
+				</div>
+
+			 	<!-- Collect the nav links, forms, and other content for toggling -->
+    			<div class="collapse navbar-collapse" id="barra-inicio">
+				 	<?php
+				 	
+						wp_nav_menu(
+									array(
+										'theme_location' => 'main-menu',
+										'menu_class' => 'nav navbar-nav' 
+										)
+									); 
+					
+					?>
+					<form id="form-search" class="navbar-form navbar-left" role="search">
+		        		<div class="form-group">
+		          			<input id="search-main-button" type="text" class="form-control" placeholder="Search">
+		        		</div>
+		        		<button type="submit" class="btn btn-default">Buscar</button>
+		        		<!-- <?php get_search_form(); ?>  --> 
+		      		</form>	
+
+				</div><!--end navbar-collapse -->
+
+			 </div><!-- end container-fluid -->
 		</nav>
 
 	</header>
+
+
+
 
 	<div class="contenido-principal">
 		<?php if ( is_home() ) :?>
