@@ -18,10 +18,8 @@
 
 </head>
 <body <?php body_class(); ?> >
-	<header>
-		<div class="container-fluid">
-			<div class="row">
-
+	<header class="container">
+		<div class="row">
 				<div id="main-logo" class="col-sm-9">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<img src="<?php echo bloginfo('template_url') .'/images/header.jpg' ?>" alt="">
@@ -40,11 +38,10 @@
 					</a>
 				</div>
 
-			</div>	
 		</div>
 
 		<nav id="menu-principal" class="navbar navbar-default" role="navigation">
-			 <div class="container-fluid">
+			 <div class="container">
 			 	<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-inicio">
@@ -68,7 +65,7 @@
 									); 
 					
 					?>
-					<form id="form-search" class="navbar-form navbar-left" role="search">
+					<form id="form-search" class="navbar-form navbar-right" role="search">
 		        		<div class="form-group">
 		          			<input id="search-main-button" type="text" class="form-control" placeholder="Search">
 		        		</div>
@@ -86,7 +83,7 @@
 
 
 
-	<div class="contenido-principal">
+	<div class="container contenido-principal">
 		<?php if ( is_home() ) :?>
 			   <div class="bradcrumb"></div>
 		<?php endif /*is_home() */?> 
