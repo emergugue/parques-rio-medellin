@@ -47,7 +47,7 @@ function parques_widget_init()
 			'id'    		=> 'widget-footer',
 			'name'			=> "footer",
 			'description'	=> 'footer con la infomacion del contacto en todas las pag',
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'before_widget' => '<div id="%1$s" class="col-sm-3">',
 			'after_widget'  => '</div>',
 		)
 	);
@@ -133,5 +133,61 @@ function parques_scripts()
 } 
 add_action( 'wp_enqueue_scripts', 'parques_scripts' );
 
+/**
+* Funcion que inicia los widgets , se debe incluir la clase 
+* que contiene el widget continuacion para luego registrarlos
+*
+**/
 
-?>
+function parquesWidgets()
+{
+	//add classes
+	include_once(TEMPLATEPATH.'/widgets/widgettexto.php');
+	//add widget
+ 	register_widget( 'Widget_Texto' );
+
+}
+add_action( 'widgets_init', 'parquesWidgets' );
+
+
+
+
+function bt_pagination() 
+{
+	$prev_arrow = is_rtl() ? '&rarr;' : '&larr;';
+	$next_arrow = is_rtl() ? '&larr;' : '&rarr;';
+
+	global $wp_query;
+	$curr 	= get_query_var('paged');
+	settype($curr, "int"); 
+
+	$total 	= $wp_query->max_num_pages;
+	$big = 999999999;
+	if( $total > 1 )  
+	{
+		if( !$current_page = $curr )
+			$current_page = 1;
+		if( get_option('permalink_structure') ) 
+		{
+			$format = 'page/%#%/';
+		} else 
+		{
+			$format = '&paged=%#%';
+		}
+
+		$pag = paginate_links(array(
+				'base'			=> str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+				'format'		=> $format,
+				'current'		=> max( 1, $curr ),
+				'total' 		=> $total,
+				'mid_size'		=> 3,
+				'type' 			=> 'list',
+				'prev_text'		=> $prev_arrow,
+				'next_text'		=> $next_arrow,
+				) );
+
+		$replace = str_replace( "<ul class='page-numbers'>", '<ul class="pagination">', $pag );
+		
+		echo $replace;
+	}
+}

@@ -175,7 +175,7 @@ function twentyfourteen_post_thumbnail() {
 	<div class="post-thumbnail">
 	<?php
 		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
-			the_post_thumbnail( 'twentyfourteen-full-width' );
+			the_post_thumbnail( 'parques-full-width' );
 		} else {
 			the_post_thumbnail();
 		}

@@ -1,11 +1,35 @@
-<article>
-	<time></time>
-	<figure>
-		<a href="#">
-			<img src="" alt="">
-		</a>
-	</figure>
-	<h2><a href="#">Título de la noticia</a></h2>
-	<p>En junio de 2013 la Alcaldía de Medellín abrió una de las convocatorias más importantes de los últimos años en el país: El Concurso Público Internacional a dos rondas de Anteproyecto Urbanístico, Paisajístico y Arquitectónico del Parque del Río Medellín.</p>
-	<a href="#" class="leer-mas">Leer toda la noticia</a>
-</article>
+<article id="post-<?php the_ID(); ?>" role="article" class="article">
+	<header>
+		<time><?php echo get_the_date() ?></time>
+		<figure class="image-article">
+			<a href="<?php esc_url(the_permalink()) ?>" >
+				<img src="" alt="">
+				<?php the_post_thumbnail( 'medium' ) ?>
+			</a>
+		</figure>
+	</header>
+	<section>
+		<h2 class="title-article"> <?php echo get_the_title() ?> </h2>
+		<span>
+			<?php
+				/**
+				* Si tiene entradilla ya sea por cualquiera de los metodos,
+				* que pongan el texto en el campo de la entradilla o poniento la etiqueta 'more'
+				**/
+				if( get_the_excerpt())
+				{
+					echo get_the_excerpt();
+				}
+				else
+				{
+					echo get_the_content('');
+				} 
+			?>
+		</span>
+		<div class="leer-mas">
+			<a href="<?php esc_url(the_permalink()) ?>" class="link-leer-mas" >Leer toda la noticia</a>
+		</div>
+
+	</section>
+	
+</article><!-- end article -->
