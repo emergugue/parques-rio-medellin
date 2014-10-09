@@ -11,8 +11,6 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->	
 
-	<meta name="description" content="<?php bloginfo( "description" ); ?>">
-
 	<!-- estilos y js agregados se encuentran en el archivo de funciones -->
 	<?php wp_head(); ?> 
 

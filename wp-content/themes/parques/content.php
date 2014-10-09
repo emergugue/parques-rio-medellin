@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" role="article" class="article">
+<article id="post-<?php the_ID(); ?>" role="article" class="article row">
 	<header>
 		<time><?php echo get_the_date() ?></time>
 		<figure class="image-article">
@@ -9,8 +9,8 @@
 		</figure>
 	</header>
 	<section>
-		<h2 class="title-article"> <?php echo get_the_title() ?> </h2>
-		<span>
+		<h3 class="title-article"> <?php echo get_the_title() ?> </h3>
+		<div>
 			<?php
 				/**
 				* Si tiene entradilla ya sea por cualquiera de los metodos,
@@ -25,11 +25,15 @@
 					echo get_the_content('');
 				} 
 			?>
-		</span>
-		<div class="leer-mas">
-			<a href="<?php esc_url(the_permalink()) ?>" class="link-leer-mas" >Leer toda la noticia</a>
 		</div>
-
 	</section>
+	<footer class="footer-article">
+		<a href="<?php esc_url(the_permalink()) ?>" class="link-leer-mas" >
+			<div class="col-sm-4 leer-mas">
+				Leer toda la noticia
+			</div>
+		</a>
+		<div class="line-inf col-sm-12"></div>
+	</footer>
 	
 </article><!-- end article -->

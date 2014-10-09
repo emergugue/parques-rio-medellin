@@ -23,6 +23,8 @@
 			</div>
 		</div>
 	</footer>
+	
+<?php include_once('socialinclude.php'); ?>
 <?php wp_footer(); ?> 
 
 </body>

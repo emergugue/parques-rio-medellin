@@ -2,6 +2,7 @@
 Theme Name: Parques del Río Medellín
 Description: Plantilla para el sitio web de Parques del Río Medellín.
 */
+
 #main-logo a 
 { 
 	width: 80%;
@@ -14,4 +15,90 @@ Description: Plantilla para el sitio web de Parques del Río Medellín.
 #main-logo a img
 { 
 	width: 100%;
+}
+
+.site-content .page-title 
+{
+	text-align: center;
+	background-color: #0272BE ;
+	color: #fff;
+}
+
+.article
+{
+	margin-bottom: 20px;
+	height: auto;
+}
+
+.article header time 
+{
+	font-size: 14;
+	color: rgba(117, 117, 117, 1);
+	padding: 10px;
+}
+
+.article section span
+{
+	text-align: justify;
+}
+
+
+.article .footer-article .leer-mas
+{
+	height: 20px;
+	background-color: #BDD330;
+	margin-top: 10px;
+	color: #fff;
+	list-style: none;
+}
+
+
+.article .footer-article .line-inf
+{
+	background-color: #BDD330;
+	height: 5px;
+	margin-top: 30px;
+}
+
+#primary .cat-descripcion
+{
+	text-align: justify;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.content-main .sublink .subcategory .subcategory-header h2
+{
+	font-size: 	25px;
+	font-weight:  bold;
+}
+
+.content-main .sublink .subcategory .subcategory-header
+{
+	margin: auto;
+}
+
+.content-main .sublink .subcategory .subcategory-header
+{
+	color: #fff;
+}
+
+
+.content-main .sublink .subcategory section .subcategory-layer2
+{
+	display: none;
+	color: #fff;
+}
+
+.content-main .subcategory
+{
+	background-color: #000;
+	height: 200px;
+}
+
+.widget-social
+{
+	height: 40px;
+	margin-top: 25px;
+	background-color: #FCC342;
 }

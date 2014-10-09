@@ -52,6 +52,16 @@ function parques_widget_init()
 		)
 	);
 
+	register_sidebar( 
+		array(
+			'id'    		=> 'widget-social',
+			'name'			=> "widget-social",
+			'description'	=> 'Contenido para las redes sociales',
+			'before_widget' => '<div id="%1$s" class="widget-social" >',
+			'after_widget'  => '</div>',
+		)
+	);
+
 }
 add_action( 'widgets_init', 'parques_widget_init' );
 
@@ -130,6 +140,9 @@ function parques_scripts()
 
 	//add scrips boostrap , con la opcion de cargar al final.
 	wp_enqueue_script('bootstrap.min', get_template_directory_uri().'/bootstrap-3.2.0/js/bootstrap.min.js',false,'3.2.0',true);
+
+	//scripts genericos de la aplicacion
+	wp_enqueue_script('script', get_template_directory_uri().'/js/scrips.js',false,'1.0',true);
 } 
 add_action( 'wp_enqueue_scripts', 'parques_scripts' );
 
@@ -143,19 +156,27 @@ function parquesWidgets()
 {
 	//add classes
 	include_once(TEMPLATEPATH.'/widgets/widgettexto.php');
+	include_once(TEMPLATEPATH.'/widgets/widget-social.php');
 	//add widget
  	register_widget( 'Widget_Texto' );
+ 	register_widget( 'Widget_Social' );
 
 }
 add_action( 'widgets_init', 'parquesWidgets' );
 
 
 
-
+/**
+* bt_pagination
+* Funcion para crear paginado adaptado al estilo de boostrap
+*
+* @version  1.0
+* @author Pablo Martínez
+*/
 function bt_pagination() 
 {
-	$prev_arrow = is_rtl() ? '&rarr;' : '&larr;';
-	$next_arrow = is_rtl() ? '&larr;' : '&rarr;';
+	$prev_arrow = is_rtl() ? '&laquo;' : '&laquo;';
+	$next_arrow = is_rtl() ? '&raquo;' : '&raquo;';
 
 	global $wp_query;
 	$curr 	= get_query_var('paged');
@@ -166,7 +187,9 @@ function bt_pagination()
 	if( $total > 1 )  
 	{
 		if( !$current_page = $curr )
+		{
 			$current_page = 1;
+		}
 		if( get_option('permalink_structure') ) 
 		{
 			$format = 'page/%#%/';
@@ -186,8 +209,39 @@ function bt_pagination()
 				'next_text'		=> $next_arrow,
 				) );
 
-		$replace = str_replace( "<ul class='page-numbers'>", '<ul class="pagination">', $pag );
-		
+		$replace = str_replace("<li><span class='page-numbers current'>","<li class='active'><span class='page-numbers current'>", $pag );
+		$replace = str_replace( "<ul class='page-numbers'>", '<ul class="pagination">', $replace );
+
 		echo $replace;
 	}
+}
+
+/**
+ * getSubcategories
+ *
+ * Permite obtener subcategorias dependiendo
+ * de una categoria padre.
+ *
+ * @param codigo de la categoria padre, extraido generalmente con esta funcion
+*		  get_cat_ID( single_cat_title("", false) ); 
+ * @return array
+ * @author Pablo Martínez
+ **/
+function getSubcategories($parent)
+{
+	settype($parent, 'int');
+
+	$args = array(
+		'orderby' => 'name',
+		'parent'  => $parent
+		);
+
+	$categories = get_categories( $args );
+
+	if($categories == NULL || count($categories) == 0 )
+	{
+		return NULL;
+	}
+
+	return $categories;
 }

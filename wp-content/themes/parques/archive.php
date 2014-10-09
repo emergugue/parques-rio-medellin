@@ -37,40 +37,37 @@ get_header(); ?>
 						the_time('Y');
 					}
 			?>
+			</h1>
 		</header><!-- .page-header -->
 
-		<?php
-		// Empieza el LOOP, con el contenido segun la plantilla
-		while ( have_posts() ) : the_post();
-			get_template_part( 'content', get_post_format() );
-		endwhile;
-		?>
+		<?php // Empieza el LOOP, con el contenido segun la plantilla ?>
+		<?php while ( have_posts() ) : the_post() ?>
+		<div class="content-main">
+			<?php get_template_part( 'content', get_post_format() ); ?>
+		</div>
+		<?php endwhile; ?>
+
 		<div class="pag">
-		<?php
+			<?php
 			/* paginacion marca telemedellin */
 			if ( function_exists( 'bt_pagination' ) ) 
 			{
 				bt_pagination();
 			}
-			else
-			{
-				echo 'que falla home';
-			}
 			?>
-			
 		</div>
 
 		<?php
 		else :
-			get_template_part( 'content', 'none' );
-
+			?>
+				<h1>no existe contenido relacionado</h1>
+			<?php
 		endif;
 		?>
 	</div><!-- #content -->
 	<!-- Bloque oculto en moviles. -->
-	<div class="sidebar hidden-xs  col-sm-4">
+	<div class="sidebar hidden-xs  col-sm-4"></div>
 
-	</div>
 </div><!-- #primary -->
 <?php
 get_footer();
