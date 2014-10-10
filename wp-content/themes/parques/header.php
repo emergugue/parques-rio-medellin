@@ -64,11 +64,7 @@
 					
 					?>
 					<form id="form-search" class="navbar-form navbar-right" role="search">
-		        		<div class="form-group">
-		          			<input id="search-main-button" type="text" class="form-control" placeholder="Search">
-		        		</div>
-		        		<button type="submit" class="btn btn-default">Buscar</button>
-		        		<!-- <?php get_search_form(); ?>  --> 
+		        		 <?php get_search_form(); ?>
 		      		</form>	
 
 				</div><!--end navbar-collapse -->

@@ -9,8 +9,24 @@
 
 get_header(); ?>
 
+<?php
+/* para decidir si es plantilla tipo 1 o tipo 2 */
+$catCod 	= get_cat_ID( single_cat_title("", false) ); 
+$col 		= "";
+$widgetArea = true;
+
+if( $catCod == 4 || $catCod == 5 || $catCod == 6)
+{
+	$widgetArea = false;
+}
+else
+{
+	$col = "col-sm-8";
+}
+?>
+
 <div id="primary" class="container-fluid">
-	<div class="site-content col-sm-8" role="main">
+	<div class="site-content <?php echo $col ?>" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -40,10 +56,9 @@ get_header(); ?>
 				</h1>
 			</header><!-- .page-header -->
 
-			<?php $catCod 	= get_cat_ID( single_cat_title("", false) ); ?>
-			<?php if( $catCod == 4 || $catCod == 5 || $catCod == 6):  ?>
+			<?php if( !$widgetArea ):  ?>
 					<?php while ( have_posts() ) : the_post() ?>
-						<div class="content-main row">
+						<div class="content-main">
 							<?php get_template_part( 'content-category', get_post_format() ); ?>
 						</div>
 					<?php endwhile; ?>
@@ -66,11 +81,14 @@ get_header(); ?>
 			</div>
 
 		<?php else : ?>
-			<h1>no existe contenido relacionado</h1>
+			<h1>No existe contenido relacionado</h1>
 		<?php endif; ?>
 	</div><!-- #content -->
-	<!-- Bloque oculto en moviles. -->
-	<div class="sidebar hidden-xs  col-sm-4"></div>
+
+	<?php if( $widgetArea): ?>
+		<!-- Bloque oculto en moviles. -->
+		<div class="sidebar hidden-xs  col-sm-4"></div>
+	<?php endif; ?>	
 
 </div><!-- #primary -->
 <?php

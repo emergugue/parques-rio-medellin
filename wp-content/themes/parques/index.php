@@ -1,5 +1,6 @@
 <?php $args = "category_name=noticias"; ?>
 <?php $proyecto = "category_name=proyecto"; ?>
+
 <?php get_header(); ?>		
 	<div class="banner-home">Si hola </div>
 	<div class="noticias-home">
