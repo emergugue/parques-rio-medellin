@@ -12,29 +12,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title">
-				<?php if (is_category())
-						{
-						single_cat_title() ;
-					 	} elseif (is_tag()) 
-					 	{
-							single_tag_title();
-						} 
-						elseif (is_author()) 
-						{
-							get_the_author_meta('display_name');
-						} elseif (is_day()) 
-						{
-							the_time('l, F j, Y');
-						} elseif (is_month()) 
-						{
-							the_time('F Y');
-						} elseif (is_year()) 
-						{
-							the_time('Y');
-						}
-				?>
-				</h1>
+				<h1 class="page-title"><?php echo esc_attr(get_search_query()) ?> </h1>
 			</header><!-- .page-header -->
 
 			<?php while ( have_posts() ) : the_post() ?>

@@ -22,6 +22,11 @@
 		</div>
 	</section>
 	<footer class="footer-article">
+		<a href="<?php esc_url(the_permalink()) ?>" class="link-leer-mas" >
+			<div class="col-sm-4 leer-mas">
+				Ver mas
+			</div>
+		</a>
 		<div class="line-inf col-sm-12"></div>
 	</footer>
 	
