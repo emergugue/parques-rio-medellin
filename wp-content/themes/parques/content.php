@@ -8,7 +8,7 @@
 			</a>
 		</figure>
 	</header>
-	<section>
+	<section >
 		<h3 class="title-article"> <?php echo get_the_title() ?> </h3>
 		<div>
 			<?php

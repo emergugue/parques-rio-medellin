@@ -103,6 +103,15 @@ Description: Plantilla para el sitio web de Parques del Río Medellín.
 	background-color: #FCC342;
 }
 
+.widget-social .text span
+{
+	color: #fff;
+	font-size: 18px;
+	display: block;
+    text-align: center;
+}
+
+
 
 #error-404
 {
@@ -120,5 +129,22 @@ Description: Plantilla para el sitio web de Parques del Río Medellín.
 #error-404 p
 {
 	font-size: 20px;
+	text-align: justify;
+}
+
+.site-content .entrada-fecha
+{
+	color: rgba(117, 117, 117, 1);
+}
+
+.site-content .entrada-titulo
+{
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+
+.site-content .entrada-contenido div p
+{
 	text-align: justify;
 }

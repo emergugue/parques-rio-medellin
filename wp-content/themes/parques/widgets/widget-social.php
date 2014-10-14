@@ -25,18 +25,23 @@ class Widget_social extends WP_Widget
 		extract($args);
 		echo $before_widget;
 		?>
-
-		<div class="googlepĺus item-social col-xs-4">
-			<div class="g-plus" data-action="share" ></div>
+		<div class="text row">
+			<span> Compartir </span>
 		</div>
 
-		<div class="facebook item-social col-xs-4">
-			<div class="fb-share-button" ></div>
-		</div>
+		<div class="social-buttons">
+			<div class="googlepĺus item-social col-xs-4">
+				<div class="g-plus" data-action="share" ></div>
+			</div>
 
-		<div class="twitter item-social col-xs-4">
-			<a class="twitter-share-button" href="https://twitter.com/share">Tweet</a>
-		</div>
+			<div class="facebook item-social col-xs-4">
+				<div class="fb-share-button" ></div>
+			</div>
+
+			<div class="twitter item-social col-xs-4">
+				<a class="twitter-share-button" href="https://twitter.com/share">Tweet</a>
+			</div>
+		</div>	
 
 		<?php
 		echo $after_widget;
