@@ -2,6 +2,13 @@
 Theme Name: Parques del Río Medellín
 Description: Plantilla para el sitio web de Parques del Río Medellín.
 */
+/*--------------Global styles-----------------*/
+body, p{
+	font-family: 'Open Sans', sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Yanone Kaffeesatz', sans-serif !important;
+}
 /*--------------Header styles-----------------*/
 #main-logo a 
 { 
@@ -16,10 +23,12 @@ Description: Plantilla para el sitio web de Parques del Río Medellín.
 }
 /*Menú*/
 .navbar-header{
-	background: #1E66A1;
+	background: #0175BE;
 }
 .navbar-header span.navbar-brand {
 	color: #fff;
+	font-family: 'PT Sans Narrow', sans-serif !important;
+	font-size: 2em;
 }
 .navbar-default .navbar-toggle{
 	border: none;
@@ -43,7 +52,7 @@ button.navbar-toggle {
 	background-color: initial;
 }
 .navbar-collapse{
-	background: #1E66A1;
+	background: #0175BE;
 	border-top: none !important;
 }
 .navbar-default .navbar-nav>li>a {
@@ -52,6 +61,8 @@ button.navbar-toggle {
 	font-size: 1.5em;
 	padding: 20px 0;
 	border-bottom: 1px solid #fff;
+	font-family: 'PT Sans Narrow', sans-serif!important;
+	font-weight: 700;
 }
 .nav>li {
 	position: relative;
@@ -81,6 +92,15 @@ form.navbar-form button.btn.btn-default{
 	height: 34px;
 	background-image: none;
 	width: 18%;
+}
+/*--------------Footer styles-----------------*/
+footer{
+	background: #0175BE;
+	color: #fff;
+	border-top: solid 5px #BFD630;
+	margin: 30px 0 0 0;
+	text-align: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 /*--------------Content styles-----------------*/
 .site-content .page-title 
