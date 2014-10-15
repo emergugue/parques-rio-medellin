@@ -41,7 +41,7 @@
 		</div>
 
 		<nav id="menu-principal" class="navbar navbar-default" role="navigation">
-			 <div class="container">
+			 <div>
 			 	<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-inicio">
@@ -54,18 +54,18 @@
 				</div>
 
 			 	<!-- Collect the nav links, forms, and other content for toggling -->
-    			<div class="collapse navbar-collapse" id="barra-inicio">
+    			<div class="collapse navbar-collapse row-fluid" id="barra-inicio">
 				 	<?php
 				 	
 						wp_nav_menu(
 									array(
 										'theme_location' => 'main-menu',
-										'menu_class' => 'nav navbar-nav' 
+										'menu_class' => 'nav navbar-nav col-sm-8' 
 										)
 									); 
 					
 					?>
-					<form id="form-search" class="navbar-form navbar-right" role="search">
+					<form id="form-search" class="navbar-form navbar-right col-sm-" role="search">
 		        		 <?php get_search_form(); ?>
 		      		</form>	
 

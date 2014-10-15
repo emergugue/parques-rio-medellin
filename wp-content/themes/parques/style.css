@@ -263,3 +263,13 @@ footer{
 {
 	text-align: justify;
 }
+@media (min-width: 768px) {
+	/*------------------Header styles----------------*/
+	.nav>li {
+		display: inline-block;
+		width: 20%;
+		border-bottom: none;
+	}
+	.navbar-default .navbar-nav>li>a {
+		border-bottom: none;
+	}
