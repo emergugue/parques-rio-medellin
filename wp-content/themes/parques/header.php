@@ -20,7 +20,7 @@
 		<div class="row">
 				<div id="main-logo" class="col-sm-9">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php echo bloginfo('template_url') .'/images/header.jpg' ?>" alt="">
+						<img src="<?php echo bloginfo('template_url') .'/images/logo-parques-del-rio.png' ?>" alt="">
 					</a>
 				</div>
 
