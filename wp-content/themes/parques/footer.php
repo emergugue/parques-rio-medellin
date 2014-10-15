@@ -5,16 +5,12 @@
 				<?php dynamic_sidebar( "widget-footer" ); ?>
 			</div>
 			<div class="row" >
-				<div class="col-sm-3">
-					<a class="item-social" href="#">
-						<img width="45" src="<?php echo bloginfo('template_url') .'/images/icons/32/closed32.png' ?>" >
-					</a>
-					<a class="item-social" href="#">
-						<img src="<?php echo bloginfo('template_url') .'/images/icons/32/fb32.png' ?>" >
-					</a>	
-					<a class="item-social" href="#">
-						<img src="<?php echo bloginfo('template_url') .'/images/icons/32/tw32.png' ?>">
-					</a>
+				<div class="col-sm-4 social-links">
+					<ul>
+						<li><a class="item-social mail-icon" href="#"></a></li>
+						<li><a class="item-social fb-icon" href="#"></a></li>
+						<li><a class="item-social tw-icon" href="#"></a></li>
+					</ul>
 				</div>
 				
 				<div class="col-sm-8">
