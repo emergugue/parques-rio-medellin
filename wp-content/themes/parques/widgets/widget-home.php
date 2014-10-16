@@ -28,7 +28,7 @@ class Widget_Home extends WP_Widget
 		$args = array('cat'=>'2', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '3' );
 		$the_query = new WP_Query($args);
 		?>
-
+		<h2>Últimas noticias</h2>
 		<?php if( $the_query->have_posts() ): 
 				while ( $the_query->have_posts() ) : $the_query->the_post()
 		?>

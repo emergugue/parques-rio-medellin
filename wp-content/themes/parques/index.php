@@ -1,25 +1,21 @@
-<?php $args = "category_name=noticias"; ?>
-<?php $proyecto = "category_name=proyecto"; ?>
-
-<?php get_header(); ?>		
-	<div class="banner-home">Si hola </div>
-	<div class="noticias-home">
-		<?php $posts_array = new WP_Query( $args ); ?> 
-			<?php if ( $posts_array->have_posts() ) : while ( $posts_array->have_posts() ) : $posts_array->the_post(); ?>
-			<?php the_title(); ?>
-			<?php endwhile; else : ?>
-				<p><?php _e( 'Pailas, no hay post' ); ?></p>
-			<?php endif; ?>
-	</div>
-	<div class="proyecto-home">
-		<?php $posts_array = new WP_Query( $proyecto ); ?> 
-			<?php if ( $posts_array->have_posts() ) : while ( $posts_array->have_posts() ) : $posts_array->the_post(); ?>
-			<?php the_title(); ?>
-			<?php endwhile; else : ?>
-				<p><?php _e( 'Pailas, no hay post' ); ?></p>
-			<?php endif; ?>
-	</div>
-	<div class="avance-home">
-		<?php dynamic_sidebar( "progress-bar" ); ?>
-	</div>
-<?php get_footer(); ?>	
+<?php
+/*
+* Index
+*/
+get_header(); 
+?>
+<header class="page-header">
+	<h1 class="page-title">
+	</h1>
+</header><!-- .page-header -->
+<div id="primary" class="container-fluid" role="main">
+	<?php /* Slider Home /**/ ?>
+	<?php echo get_new_royalslider(1); ?>
+	<?php /* Últimas noticias /**/ ?>
+	<?php dynamic_sidebar( "widget-home" ); ?>
+	<?php /* Barra de progreso /**/?>
+	<?php dynamic_sidebar( "widget-progreso" ); ?>
+	<?php /* Categorías /**/?>
+	<?php dynamic_sidebar( "widget-categorias" ); ?>
+</div><!-- #primary -->
+<?php get_footer(); ?>

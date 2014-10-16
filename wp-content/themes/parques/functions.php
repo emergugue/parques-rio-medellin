@@ -91,6 +91,26 @@ function parques_widget_init()
 			'after_widget'  => '</div>',
 		)
 	);
+
+	register_sidebar( 
+		array(
+			'id'    		=> 'widget-progreso',
+			'name'			=> "widget-progreso",
+			'description'	=> 'Widget con barra de progreso del proyecto.',
+			'before_widget' => '<div id="widget-progreso" >',
+			'after_widget'  => '</div>',
+		)
+	);
+
+	register_sidebar( 
+		array(
+			'id'    		=> 'widget-categorias',
+			'name'			=> "widget-categorias",
+			'description'	=> 'Widget con categorías del proyecto.',
+			'before_widget' => '<div id="widget-categorias" >',
+			'after_widget'  => '</div>',
+		)
+	);
 }
 add_action( 'widgets_init', 'parques_widget_init' );
 
@@ -135,7 +155,7 @@ function parques_wp_title( $title, $sep )
 add_filter( 'wp_title', 'parques_wp_title', 10, 2 );
 
 /**
- * scrips comunes en todo el sitio -
+ * scripts comunes en todo el sitio -
  * basicamente utizados para implementar el estilo por defecto
  * style.css y los estilos de boostrap
  * utilizalos con responsabilidad.
@@ -156,8 +176,8 @@ add_action( 'wp_enqueue_scripts', 'parques_styles' );
 
 
 /**
- * scrips utilizados globalmente.
- * No incluyas scrips que sean comunes para el sitio.
+ * scripts utilizados globalmente.
+ * No incluyas scripts que sean comunes para el sitio.
  * intenta siempre incluirlos al final.
  * utilizalos con responsabilidad.
  *
@@ -167,11 +187,11 @@ function parques_scripts()
 	//add jquery
 	wp_enqueue_script('jquery','/wp-includes/js/jquery/jquery.js',false,'1.11.0',true);
 
-	//add scrips boostrap , con la opcion de cargar al final.
+	//add scripts boostrap , con la opcion de cargar al final.
 	wp_enqueue_script('bootstrap.min', get_template_directory_uri().'/bootstrap-3.2.0/js/bootstrap.min.js',false,'3.2.0',true);
 
 	//scripts genericos de la aplicacion
-	wp_enqueue_script('script', get_template_directory_uri().'/js/scrips.js',false,'1.0',true);
+	wp_enqueue_script('script', get_template_directory_uri().'/js/script.js',false,'1.0',true);
 } 
 add_action( 'wp_enqueue_scripts', 'parques_scripts' );
 
@@ -187,11 +207,15 @@ function parquesWidgets()
 	include_once(TEMPLATEPATH.'/widgets/widgettexto.php');
 	include_once(TEMPLATEPATH.'/widgets/widget-social.php');
 	include_once(TEMPLATEPATH.'/widgets/widget-home.php');
+	include_once(TEMPLATEPATH.'/widgets/widget-progreso.php');
+	include_once(TEMPLATEPATH.'/widgets/widget-categorias.php');
 	include_once(TEMPLATEPATH.'/widgets/widget-banner.php');
 	//add widget
  	register_widget( 'Widget_Texto' );
  	register_widget( 'Widget_Social' );
  	register_widget( 'Widget_Home' );
+ 	register_widget( 'Widget_Progreso' );
+ 	register_widget( 'Widget_Categorias' );
  	register_widget( 'Widget_Banner' );
 
 }
@@ -265,7 +289,7 @@ function getSubcategories($parent)
 	settype($parent, 'int');
 
 	$args = array(
-		'orderby' => 'name',
+		'orderby' => 'id',
 		'parent'  => $parent
 		);
 
@@ -279,4 +303,12 @@ function getSubcategories($parent)
 	return $categories;
 }
 
-
+/* Adición de skin personalizado para el slider /**/
+add_filter('new_royalslider_skins', 'new_royalslider_add_custom_skin', 10, 2);
+function new_royalslider_add_custom_skin($skins) {
+      $skins['parques'] = array(
+           'label' => 'Parques',
+           'path' => get_bloginfo('template_url') . 'new-royalslider/parques/parques.css'
+      );
+      return $skins;
+}
