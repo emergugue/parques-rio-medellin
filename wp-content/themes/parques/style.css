@@ -370,20 +370,32 @@ footer p{
 		list-style: none;
 		display: inline-block;
 	}
-	.redes-sociales ul li a{
-		display: block;
-		width: 30px;
-		height: 30px;
-		background: url(images/social-icons.png) no-repeat;
-	}
-	a.mail-header{
+	.redes-sociales ul li a {
+	    display: block;
+	    width: 30px;
+	    height: 30px;
+	    background: url(images/social-icons.png) no-repeat;
+	    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	    filter: alpha(opacity=80);
+	    opacity: 0.8;
+	    -moz-transition: all 0.5s ease;
+	    -o-transition: all 0.5s ease;
+	    -webkit-transition: all 0.5s ease;
+	    transition: all 0.5s ease
+    }
+    .redes-sociales ul li a:hover {
+	    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	    filter: alpha(opacity=100);
+	    opacity: 1
+    }
+	.redes-sociales ul li a.mail-header{
 		background-position: 0 0;
 	}
-	a.tw-header{
+	.redes-sociales ul li a.tw-header{
 		background-position: -30px 0;
 	}
-	a.fb-header{
-		background-position: 0 0;
+	.redes-sociales ul li a.fb-header{
+		background-position: -60px 0;
 	}
 	.alcaldia-header{
 		clear: both;
