@@ -18,67 +18,68 @@
 
 </head>
 <body <?php body_class(); ?> >
-	<header class="container">
-		<div class="row header-content">
-				<div id="main-logo" class="col-sm-9">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="visible-xs">
-						<img src="<?php echo bloginfo('template_url') .'/images/logo-parques-del-rio.png' ?>" alt="">
-					</a>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="hidden-xs">
-						<img src="<?php echo bloginfo('template_url') .'/images/logo-parques.png' ?>" alt="">
-					</a>
-				</div>
-
-				<div class="hidden-xs col-sm-3 header-rigth">
-					<div class="redes-sociales">
-						<ul>
-							<li><a href="mailto:emerson.gutierrez@telemedellin.tv" class="mail-header" target="_blank"></a></li>
-							<li><a href="https://twitter.com/ParqRioMedellin" class="tw-header" target="_blank"></a></li>
-							<li><a href="https://www.facebook.com/AmigosdelParquedelRioMedellin" class="fb-header" target="_blank"></a></li>
-						</ul>
-					</div>
-					<div class="alcaldia-header">
-						<a href="http://www.medellin.gov.co/irj/portal/medellin" target="_blank">
+	<header>
+		<div class="container contenedor-header">
+			<div class="row header-content">
+					<div id="main-logo" class="col-sm-9 col-md-8">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="visible-xs">
+							<img src="<?php echo bloginfo('template_url') .'/images/logo-parques-del-rio.png' ?>" alt="">
+						</a>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="hidden-xs">
+							<img src="<?php echo bloginfo('template_url') .'/images/logo-parques.png' ?>" alt="">
 						</a>
 					</div>
-				</div>
 
+					<div class="hidden-xs col-sm-3 col-md-4 header-rigth">
+						<div class="redes-sociales">
+							<ul>
+								<li><a href="mailto:emerson.gutierrez@telemedellin.tv" class="mail-header" target="_blank"></a></li>
+								<li><a href="https://twitter.com/ParqRioMedellin" class="tw-header" target="_blank"></a></li>
+								<li><a href="https://www.facebook.com/AmigosdelParquedelRioMedellin" class="fb-header" target="_blank"></a></li>
+							</ul>
+						</div>
+						<div class="alcaldia-header">
+							<a href="http://www.medellin.gov.co/irj/portal/medellin" target="_blank">
+							</a>
+						</div>
+					</div>
+
+			</div>
+
+			<nav id="menu-principal" class="navbar navbar-default" role="navigation">
+				 <div>
+				 	<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-inicio">
+					    <span class="sr-only">Toggle navigation</span>
+					    <span class="icon-bar"></span>
+					    <span class="icon-bar"></span>
+					    <span class="icon-bar"></span>
+					  </button>
+					  <span class="hidden-sm hidden-md hidden-lg navbar-brand collapsed" data-toggle="collapse" data-target="#barra-inicio" >Menú</span>
+					</div>
+
+				 	<!-- Collect the nav links, forms, and other content for toggling -->
+	    			<div class="collapse navbar-collapse row-fluid" id="barra-inicio">
+					 	<?php
+					 	
+							wp_nav_menu(
+										array(
+											'theme_location' => 'main-menu',
+											'menu_class' => 'nav navbar-nav col-sm-8' 
+											)
+										); 
+						
+						?>
+						<form id="form-search" class="navbar-form navbar-right col-sm-" role="search">
+			        		 <?php get_search_form(); ?>
+			      		</form>	
+
+					</div><!--end navbar-collapse -->
+
+				 </div><!-- end container-fluid -->
+			</nav>
 		</div>
-
-		<nav id="menu-principal" class="navbar navbar-default" role="navigation">
-			 <div>
-			 	<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-inicio">
-				    <span class="sr-only">Toggle navigation</span>
-				    <span class="icon-bar"></span>
-				    <span class="icon-bar"></span>
-				    <span class="icon-bar"></span>
-				  </button>
-				  <span class="hidden-sm hidden-md hidden-lg navbar-brand collapsed" data-toggle="collapse" data-target="#barra-inicio" >Menú</span>
-				</div>
-
-			 	<!-- Collect the nav links, forms, and other content for toggling -->
-    			<div class="collapse navbar-collapse row-fluid" id="barra-inicio">
-				 	<?php
-				 	
-						wp_nav_menu(
-									array(
-										'theme_location' => 'main-menu',
-										'menu_class' => 'nav navbar-nav col-sm-8' 
-										)
-									); 
-					
-					?>
-					<form id="form-search" class="navbar-form navbar-right col-sm-" role="search">
-		        		 <?php get_search_form(); ?>
-		      		</form>	
-
-				</div><!--end navbar-collapse -->
-
-			 </div><!-- end container-fluid -->
-		</nav>
-
 	</header>
 
 

@@ -1,6 +1,6 @@
 	</div> <!-- main  -->
 	<footer>
-		<div id="contenedor-footer" class="container-fluid">
+		<div id="contenedor-footer" class="container">
 			<div class="row" >
 				<div class="col-sm-8 contact-links">
 					<p>Lo invitamos a estar en contacto con nuestro proyecto a través de:</p>

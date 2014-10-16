@@ -334,11 +334,28 @@ footer p{
 	text-align: justify;
 }
 @media (min-width: 768px) {
+	/*------------------General styles---------------*/
+	body{
+		background: url(images/bg.jpg) no-repeat top center fixed;
+	}
 	/*------------------Header styles----------------*/
+	.contenedor-header{
+		background: #0175BE;
+	}
+	ul.navbar-nav{
+		margin-left: -15px;
+	}
+	.navbar{
+		margin-bottom: 0px !important;
+	}
+	.navbar-default{
+		background-color: none !important;
+		border: none !important;
+	}
 	.header-content{
 		background: url(images/header-bg.jpg) no-repeat top center;
-		margin-left: 0px !important;
-		margin-right: 0px !important;
+		/*margin-left: 0px !important;
+		margin-right: 0px !important;*/
 	}
 	#main-logo{
 		padding-left: 0px;
@@ -424,4 +441,51 @@ footer p{
 	}
 	.navbar-collapse.collapse{
 		padding-left: 0px !important;
+	}
+	/*------------------Footer styles------------------*/
+	.contact-links ul{
+		width: 100%;
+		text-align: left;
+	}
+	.contact-links ul li a{
+		padding: 5px 0px 5px 40px;
+	}
+	footer p {
+		font-size: 1.3em;
+		text-align: left;
+	}
+	.logo-footer{
+		-webkit-background-size: contain;
+		background-size: contain;
+		width: 100%;
+		margin: 50% 0 -50% 0;
+	}
+	/*----------------Content style---------------*/
+	.contenido-principal{
+		background: #fff;
+		padding: 15px;
+	}
+	@media (min-width: 992px){
+	/*----------------Header content-------------*/
+		#main-logo a {
+			height: 180px;
+			width: 400px;
+			margin: 59px 0 15px 0;
+		}
+		.header-content{
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+		.redes-sociales{
+			margin-bottom: 80px;
+		}
+		.alcaldia-header a{
+			height: 105px;
+		}
+	}
+	@media (min-width: 1200px){
+		.header-content{
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
 	}
