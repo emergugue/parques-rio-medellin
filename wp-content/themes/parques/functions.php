@@ -62,6 +62,35 @@ function parques_widget_init()
 		)
 	);
 
+	register_sidebar( 
+		array(
+			'id'    		=> 'widget-gallery',
+			'name'			=> "widget-gallery",
+			'description'	=> 'widget para el plugin de galerias',
+			'before_widget' => '<div  class="widget-gallery" >',
+			'after_widget'  => '</div>',
+		)
+	);
+
+	register_sidebar( 
+		array(
+			'id'    		=> 'widget-banner',
+			'name'			=> "widget-banner",
+			'description'	=> 'Banner para parques del rio.',
+			'before_widget' => '<div id="widget-banner" >',
+			'after_widget'  => '</div>',
+		)
+	);
+
+	register_sidebar( 
+		array(
+			'id'    		=> 'widget-home',
+			'name'			=> "widget-home",
+			'description'	=> 'Contenido relacionado con articulos del sitio.',
+			'before_widget' => '<div id="widget-home" >',
+			'after_widget'  => '</div>',
+		)
+	);
 }
 add_action( 'widgets_init', 'parques_widget_init' );
 
@@ -157,9 +186,13 @@ function parquesWidgets()
 	//add classes
 	include_once(TEMPLATEPATH.'/widgets/widgettexto.php');
 	include_once(TEMPLATEPATH.'/widgets/widget-social.php');
+	include_once(TEMPLATEPATH.'/widgets/widget-home.php');
+	include_once(TEMPLATEPATH.'/widgets/widget-banner.php');
 	//add widget
  	register_widget( 'Widget_Texto' );
  	register_widget( 'Widget_Social' );
+ 	register_widget( 'Widget_Home' );
+ 	register_widget( 'Widget_Banner' );
 
 }
 add_action( 'widgets_init', 'parquesWidgets' );
@@ -245,3 +278,5 @@ function getSubcategories($parent)
 
 	return $categories;
 }
+
+

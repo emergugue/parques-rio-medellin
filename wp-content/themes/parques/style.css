@@ -291,6 +291,44 @@ footer p{
 }
 
 
+
+.site-content .entrada-contenido div p
+{
+	text-align: justify;
+}
+
+
+.gallery section h3
+{
+	font-size: 18px;
+	color: #D4B98A;
+}
+
+.gallery header time
+{
+	display: block;
+	color: rgba(117, 117, 117, 1);
+	margin-bottom: 20px;
+}
+
+.site-content .entrada-encabezado-galeria
+{
+	border: 1px solid rgba(117, 117, 117, 1) ;
+	margin-bottom: 20px;
+}
+
+.site-content .entrada-encabezado-galeria .entrada-titulo
+{
+	text-align: left;
+	margin: 0;
+}
+
+.site-content .entrada-encabezado-galeria .linea-entradilla
+{
+	height: 15px;
+	background-color: #FCC342;
+}
+
 .site-content .entrada-contenido div p
 {
 	text-align: justify;
