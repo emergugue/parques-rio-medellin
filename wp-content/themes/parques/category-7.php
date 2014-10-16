@@ -57,7 +57,7 @@ get_header();
 				<?php include( 'child-category.php') ?>
 				
 			<?php endforeach; ?>
-		<? endif; ?>	
+		<?php endif; ?>	
 	</div>	
 
 	<div >
