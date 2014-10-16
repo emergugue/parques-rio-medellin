@@ -100,36 +100,68 @@ form.navbar-form button.btn.btn-default{
 }
 /*--------------Footer styles-----------------*/
 footer{
-	background: #0175BE;
-	color: #fff;
+	background: #fff;
+	color: #7a7a7a;
 	border-top: solid 5px #BFD630;
 	margin: 30px 0 0 0;
 	text-align: center;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
+	padding: 30px 0 30px 0;
 }
-.social-links ul{
-	margin: 0px;
+footer p{
+	font-size: 1.5em;
+}
+.contact-links ul{
+	width: 80%;
+	margin: 0px auto;
 	padding: 0px;
 }
-.social-links ul li{
-	display: inline-block;
+.contact-links ul li{
 	list-style: none;
 }
-.social-links ul li a{
-	background: url(images/social-icons.png) no-repeat;
-	display: block;
+.contact-links ul li a{
+	display: inline-block;
+	color: #7a7a7a;
+	padding: 15px 0px 15px 40px;
+	font-size: 1.2em;
+	position: relative;
+	}
+.contact-links ul li a:before, .contact-links ul li a::before{
+	content: "";
+	background: url(images/footer-icons.png) no-repeat;
 	width: 30px;
 	height: 30px;
-	margin: 5px 10px;
+	display: block;
+	top: 0;
+	left: 0;
+	position: absolute;
+	bottom: 0;
+	right: 100%;
+	margin: auto;
 }
-.social-links a.mail-icon{
-	background-position: 0px 0px;
+.contact-links ul li a.web:before, .contact-links ul li a.web::before{
+	background-position: 0 0;
 }
-.social-links a.fb-icon{
-	background-position: -30px 0px;
+.contact-links ul li a.facebook:before, .contact-links ul li a.facebook::before{
+	background-position: -34px 0;
 }
-.social-links a.tw-icon{
-	background-position: -60px 0px;
+.contact-links ul li a.twitter:before, .contact-links ul li a.twitter::before{
+	background-position: -69px 0;
+}
+.contact-links ul li a.instagram:before, .contact-links ul li a.instagram::before{
+	background-position: -103px 0;
+}
+.contact-links ul li a.tel:before, .contact-links ul li a.tel::before{
+	background-position: -138px 0;
+}
+.contact-links ul li a.direccion:before, .contact-links ul li a.direccion::before{
+	background-position: -168px 0;
+}
+.logo-footer{
+	background: url(images/logo-alcaldia.jpg) no-repeat top center;
+	height: 111px;
+	width: 80%;
+	margin: 0 auto;
 }
 /*--------------Content styles-----------------*/
 .site-content .page-title 
@@ -265,6 +297,55 @@ footer{
 }
 @media (min-width: 768px) {
 	/*------------------Header styles----------------*/
+	.header-content{
+		background: url(images/header-bg.jpg) no-repeat top center;
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+	#main-logo{
+		padding-left: 0px;
+	}
+	#main-logo a {
+		height: 130px;
+		width: 300px;
+		margin: 30px 0 15px 0;
+	}
+	.header-rigth{
+		padding-right: 0px !important;
+	}
+	.redes-sociales ul{
+		margin: 0px;
+	}
+	.redes-sociales ul li{
+		list-style: none;
+		display: inline-block;
+	}
+	.redes-sociales ul li a{
+		display: block;
+		width: 30px;
+		height: 30px;
+		background: url(images/social-icons.png) no-repeat;
+	}
+	a.mail-header{
+		background-position: 0 0;
+	}
+	a.tw-header{
+		background-position: 0 0;
+	}
+	a.fb-header{
+		background-position: 0 0;
+	}
+	.alcaldia-header{
+		margin-top: 40px;
+	}
+	.alcaldia-header a{
+		display: block;
+		height: 75px;
+		width: 100%;
+		background: url(images/logos-alcaldia-header.png) no-repeat right;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
 	.nav>li {
 		display: inline-block;
 		width: 20%;
@@ -272,4 +353,13 @@ footer{
 	}
 	.navbar-default .navbar-nav>li>a {
 		border-bottom: none;
+	}
+	form.navbar-form{
+		overflow: inherit;
+	}
+	form.navbar-form button.btn.btn-default{
+		top: -1px;
+	}
+	.navbar-collapse.collapse{
+		padding-left: 0px !important;
 	}

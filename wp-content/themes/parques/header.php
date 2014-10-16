@@ -19,23 +19,28 @@
 </head>
 <body <?php body_class(); ?> >
 	<header class="container">
-		<div class="row">
+		<div class="row header-content">
 				<div id="main-logo" class="col-sm-9">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="visible-xs">
 						<img src="<?php echo bloginfo('template_url') .'/images/logo-parques-del-rio.png' ?>" alt="">
+					</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="hidden-xs">
+						<img src="<?php echo bloginfo('template_url') .'/images/logo-parques.png' ?>" alt="">
 					</a>
 				</div>
 
-				<div id="redes-sociales" class="hidden-xs col-sm-3">
-					<a class="item-social" href="#">
-						<img width="45" src="<?php echo bloginfo('template_url') .'/images/icons/32/closed32.png' ?>" >
-					</a>
-					<a class="item-social" href="#">
-						<img src="<?php echo bloginfo('template_url') .'/images/icons/32/fb32.png' ?>" >
-					</a>	
-					<a class="item-social" href="#">
-						<img src="<?php echo bloginfo('template_url') .'/images/icons/32/tw32.png' ?>">
-					</a>
+				<div class="hidden-xs col-sm-3 header-rigth">
+					<div class="redes-sociales">
+						<ul>
+							<li><a href="mailto:emerson.gutierrez@telemedellin.tv" class="mail-header" target="_blank"></a></li>
+							<li><a href="https://twitter.com/ParqRioMedellin" class="tw-header" target="_blank"></a></li>
+							<li><a href="https://www.facebook.com/AmigosdelParquedelRioMedellin" class="fb-header" target="_blank"></a></li>
+						</ul>
+					</div>
+					<div class="alcaldia-header">
+						<a href="http://www.medellin.gov.co/irj/portal/medellin" target="_blank">
+						</a>
+					</div>
 				</div>
 
 		</div>

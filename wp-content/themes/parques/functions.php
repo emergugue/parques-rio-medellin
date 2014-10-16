@@ -47,7 +47,7 @@ function parques_widget_init()
 			'id'    		=> 'widget-footer',
 			'name'			=> "footer",
 			'description'	=> 'footer con la infomacion del contacto en todas las pag',
-			'before_widget' => '<div id="%1$s" class="col-sm-3">',
+			'before_widget' => '<div id="%1$s" class="col-sm-4">',
 			'after_widget'  => '</div>',
 		)
 	);
