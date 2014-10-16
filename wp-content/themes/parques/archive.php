@@ -99,7 +99,7 @@ else
 
 	<?php if( $widgetArea): ?>
 		<!-- Bloque oculto en moviles. -->
-		<div class="sidebar hidden-xs  col-sm-4"></div>
+		<div class="sidebar hidden-xs  col-sm-4"><?php dynamic_sidebar('sidebar');?></div>
 	<?php endif; ?>	
 
 </div><!-- #primary -->

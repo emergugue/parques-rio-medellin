@@ -111,6 +111,16 @@ function parques_widget_init()
 			'after_widget'  => '</div>',
 		)
 	);
+
+	register_sidebar( 
+		array(
+			'id'    		=> 'sidebar',
+			'name'			=> "sidebar",
+			'description'	=> 'Sidebar',
+			'before_widget' => '<div id="%1$s" class="widget-%1$s" >',
+			'after_widget'  => '</div>',
+		)
+	);
 }
 add_action( 'widgets_init', 'parques_widget_init' );
 
