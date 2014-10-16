@@ -3,7 +3,6 @@
 		<time><?php echo get_the_date() ?></time>
 		<figure class="image-article">
 			<a href="<?php esc_url(the_permalink()) ?>" >
-				<img src="" alt="">
 				<?php the_post_thumbnail( 'medium' ) ?>
 			</a>
 		</figure>

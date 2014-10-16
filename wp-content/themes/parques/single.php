@@ -11,27 +11,23 @@ get_header(); ?>
 <div id="primary" class="container-fluid">
 	<div class="site-content col-sm-8" role="main" >
 
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" >
-				<header class="entrada-encabezado">
-					<div class="entrada-fecha">
-						<time><?php echo get_the_date() ?></time>
-					</div>
+	
+			<!-- categoria diferente galeria -->
+			<?php if (! in_category( 11 ) ): ?>
 
-					<div class="entrada-titulo">
-						<h1><?php the_title(); ?></h1>
-					</div>
-				</header>
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<?php get_template_part( 'content-single', get_post_format() ); ?>
+					<?php endwhile; ?>
+				<?php endif; ?>
 
-				<section class="entrada-contenido row">
-					<div>
-						<!-- Contenido del post -->
-						<?php the_content(); ?>
-					</div>
-				</section>
-			</article>
-		<?php endwhile; ?>
-		<?php endif; ?>	<!-- end if have_post() -->
+			<?php else: ?>
+
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<?php get_template_part( 'content-single-gallery', get_post_format() ); ?>
+					<?php endwhile; ?>
+				<?php endif; ?>
+
+			<?php endif; ?>		
 
 		<div>
 			<?php dynamic_sidebar( "widget-social" ); ?>
