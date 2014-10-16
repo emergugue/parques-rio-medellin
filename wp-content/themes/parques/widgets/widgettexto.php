@@ -10,7 +10,7 @@ class Widget_Texto extends WP_Widget
 {
 
 	function Widget_Texto(){
-		parent::__construct( false, 'Widget texto Telemedellín', 
+		parent::__construct( false, 'Widget texto parques del rio', 
 			array('description'=>'Este widget permite poner una columna con información,adaptada para moviles.'));
 	}
 

@@ -15,7 +15,7 @@ $catCod 	= get_cat_ID( single_cat_title("", false) );
 $col 		= "";
 $widgetArea = true;
 
-if( $catCod == 4 || $catCod == 5 || $catCod == 6)
+if( in_category( array(4,5,6,8,9) ) ) 
 {
 	$widgetArea = false;
 }
@@ -63,12 +63,24 @@ else
 						</div>
 					<?php endwhile; ?>
 			<?php else: ?>
-				<?php while ( have_posts() ) : the_post() ?>
-					<div class="content-main">
-						<?php get_template_part( 'content', get_post_format() ); ?>
-					</div>
-				<?php endwhile; ?>
-			<?php endif;  ?>
+
+				<!-- caregoria: galerias -->
+				<?php if( in_category(11)): ?>
+
+					<?php while ( have_posts() ) : the_post() ?>
+						<div class="content-main">
+							<?php get_template_part( 'content-gallery', get_post_format() ); ?>
+						</div>
+					<?php endwhile; ?>
+
+				<?php else: ?>
+					<?php while ( have_posts() ) : the_post() ?>
+						<div class="content-main">
+							<?php get_template_part( 'content', get_post_format() ); ?>
+						</div>
+					<?php endwhile; ?>
+				<?php endif;  ?>
+			<?php endif; ?>	
 
 			<div class="pag">
 				<?php
