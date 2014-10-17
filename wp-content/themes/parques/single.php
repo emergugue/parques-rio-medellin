@@ -39,6 +39,12 @@ get_header(); ?>
 			<?php endif; ?>		
 
 		<div>
+		<?php if( in_category( 2 ) ): ?>
+			<div class="comments"> 
+				<?php  echo do_shortcode('[vivafbcomment]'); ?>
+			</div>
+		<?php endif; ?>
+
 			<?php dynamic_sidebar( "widget-social" ); ?>
 		</div>
 
@@ -47,6 +53,8 @@ get_header(); ?>
 	<div class="sidebar hidden-xs  col-sm-4" >
 
 	</div>
+
+
 
 </div><!--primary-->
 <?php
