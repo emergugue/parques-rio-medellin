@@ -57,6 +57,10 @@ else
 			</header><!-- .page-header -->
 
 			<?php if( !$widgetArea ):  ?>
+					<div class="cat-descripcion">
+						<p><?php echo category_description(); ?> </p>
+					</div>
+
 					<?php while ( have_posts() ) : the_post() ?>
 						<div class="content-main">
 							<?php get_template_part( 'content-category', get_post_format() ); ?>
