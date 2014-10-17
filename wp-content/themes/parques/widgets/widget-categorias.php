@@ -31,24 +31,33 @@ class Widget_Categorias extends WP_Widget
 		$categories = getSubcategories($catCod);
 		?>
 		<div class="categorias">
-			<?php if( $categories ): ?>
-				<?php foreach ($categories as $key => $category): ?>
-				<a id="cat-<?php echo $category->cat_ID ?>" class="<?php echo $category->slug ?> sublink col-sm-4" 
-					href="<?php echo get_category_link($category->cat_ID) ?>">
+				<div id="primary" class="container-fluid" role="main">
+					<div class="content-main row">
+						<?php if( $categories ): ?>
 
-					<article class="subcategory">
-						<header class="subcategory-header">
-							<h2><?php echo $category->name ?></h2>
-						</header>
-						<section> 
-							<div class="subcategory-layer2">
-								<h2><?php echo $category->name ?></h2>
-							</div>
-						</section>
-					</article>
-				</a>
-				<?php endforeach; ?>
-			<?php endif; ?>	
+							<?php foreach ($categories as $key => $category): ?>
+								<a id="cat-<?php echo $category->cat_ID ?>"
+									class="<?php echo $category->slug ?> sublink col-sm-4" 
+									href="<?php echo get_category_link($category->cat_ID) ?>">
+
+									<article class="subcategory">
+										<header class="subcategory-header">
+											<h2><?php echo $category->name ?></h2>
+										</header>
+										<section> 
+											<div class="subcategory-layer2">
+												<h2><?php echo $category->name ?></h2>
+											</div>
+										</section>
+									</article>
+								</a>
+
+							<?php endforeach; ?>
+
+						<?php endif; ?>	
+					</div>	
+
+				</div><!-- #primary -->
 		</div>	
 		<?php
 		echo $after_widget;
