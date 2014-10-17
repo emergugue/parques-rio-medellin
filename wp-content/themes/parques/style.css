@@ -164,6 +164,43 @@ footer p{
 	margin: 0 auto;
 }
 /*--------------Content styles-----------------*/
+/*Banner home*/
+.royalSlider, .rsOverflow{
+	height: 400px !important;
+	margin-bottom: 60px;
+}
+.banner-description {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: auto;
+}
+.banner-description h3 {
+	margin: 0 0 0 0;
+	padding: 0.5em;
+	background: rgba(252, 192, 68, 0.8);
+	color: #fff;
+}
+.banner-description p{
+	background: rgba(30, 102, 161, 0.8);
+	opacity: 0.8;
+	padding: 1em;
+	margin: 0;
+}
+.rsNavItem.rsBullet{
+	margin: 0 8px;
+}
+.parques .rsBullets{
+	bottom: -20px !important;
+	height: 20px !important;
+	background: #FEC345 !important;
+}
+.parques .rsBullet span{
+	background: rgba(30, 102, 161, 0.4) !important;
+}
+.parques .rsBullet.rsNavSelected span {
+	background-color: #1E66A1 !important;
+}
 .site-content .page-title 
 {
 	text-align: center;
