@@ -10,6 +10,13 @@ get_header();
 ?>
 
 <header class="page-header">
+	<div class="breadcrumbs">
+		<?php if(function_exists('bcn_display'))
+		{
+			bcn_display();
+		}
+		?>
+	</div>
 	<h1 class="page-title">
 
 		<?php if (is_category())

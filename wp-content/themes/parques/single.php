@@ -8,10 +8,19 @@
 
 get_header(); ?>
 
+<header class="page-header">
+	<div class="breadcrumbs">
+		<?php if(function_exists('bcn_display'))
+		{
+			bcn_display();
+		}
+		?>
+	</div>
+</header><!-- .page-header -->
+
+
 <div id="primary" class="container-fluid">
 	<div class="site-content col-sm-8" role="main" >
-
-	
 			<!-- categoria diferente galeria -->
 			<?php if (! in_category( 11 ) ): ?>
 
