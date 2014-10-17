@@ -325,8 +325,6 @@ a:hover .subcategory-layer2 {
     text-align: center;
 }
 
-
-
 #error-404
 {
 	margin: auto;
@@ -533,6 +531,26 @@ a:hover .subcategory-layer2 {
 	.contenido-principal{
 		background: #fff;
 		padding: 15px;
+	}
+	/*Banner home*/
+	.royalSlider, .rsOverflow{
+		height: 315px !important;
+	}
+	.banner-description{
+		width: 30%;
+		top: 0px;
+		right: 5%;
+	}
+	/*Fin banner home*/
+	#widget-home, #widget-progreso, #widget-categorias{
+		overflow: auto;
+	}
+	.article{
+		margin: 2em 0em 1em 0em;
+		overflow: auto;
+	}
+	footer.footer-article{
+		overflow: auto;
 	}
 	@media (min-width: 992px){
 	/*----------------Header content-------------*/
