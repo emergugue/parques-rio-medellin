@@ -97,7 +97,7 @@ function parques_widget_init()
 			'id'    		=> 'widget-progreso',
 			'name'			=> "widget-progreso",
 			'description'	=> 'Widget con barra de progreso del proyecto.',
-			'before_widget' => '<div id="widget-progreso" >',
+			'before_widget' => '<div id="widget-progreso" class="hidden-xs" >',
 			'after_widget'  => '</div>',
 		)
 	);
