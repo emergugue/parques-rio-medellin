@@ -66,14 +66,17 @@
 							wp_nav_menu(
 										array(
 											'theme_location' => 'main-menu',
-											'menu_class' => 'nav navbar-nav col-sm-8' 
+											'menu_class' => 'nav navbar-nav',
+											'container_class' => 'menu-menu-principal-container col-sm-8' 
 											)
 										); 
 						
 						?>
-						<form id="form-search" class="navbar-form navbar-right col-sm-" role="search">
-			        		 <?php get_search_form(); ?>
-			      		</form>	
+						<div class="col-sm-4">
+							<form id="form-search" class="navbar-form navbar-right" role="search">
+				        		 <?php get_search_form(); ?>
+				      		</form>	
+				      	</div>
 
 					</div><!--end navbar-collapse -->
 

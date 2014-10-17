@@ -318,7 +318,7 @@ add_filter('new_royalslider_skins', 'new_royalslider_add_custom_skin', 10, 2);
 function new_royalslider_add_custom_skin($skins) {
       $skins['parques'] = array(
            'label' => 'Parques',
-           'path' => get_bloginfo('template_url') . 'new-royalslider/parques/parques.css'
+           'path' => get_bloginfo('template_url') . '/new-royalslider/parques/parques.css'
       );
       return $skins;
 }
