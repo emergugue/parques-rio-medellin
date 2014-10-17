@@ -30,7 +30,7 @@ class Widget_Home extends WP_Widget
 		?>
 		<h2 class="titulo-principal">Últimas noticias</h2>
 		<?php if( $the_query->have_posts() ):?>
-		<div class="row-fluid">
+		<div class="row">
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post()?>
 				<div class="content-main col-sm-4">
 					<?php get_template_part( 'content-widget',get_post_format() ); ?>

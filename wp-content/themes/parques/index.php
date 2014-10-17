@@ -8,7 +8,7 @@ get_header();
 	<h1 class="page-title">
 	</h1>
 </header><!-- .page-header -->
-<div id="primary" class="container-fluid" role="main">
+<div id="primary" role="main">
 	<?php /* Slider Home /**/ ?>
 	<?php echo get_new_royalslider(1); ?>
 	<?php /* Últimas noticias /**/ ?>

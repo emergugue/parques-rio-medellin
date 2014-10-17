@@ -165,6 +165,9 @@ footer p{
 	margin: 0 auto;
 }
 /*--------------Content styles-----------------*/
+.contenido-principal{
+	background: #ececec;
+}
 /*Banner home*/
 .royalSlider, .rsOverflow{
 	height: 400px !important;
@@ -529,7 +532,7 @@ a:hover .subcategory-layer2 {
 	}
 	/*----------------Content style---------------*/
 	.contenido-principal{
-		background: #fff;
+		background: #ececec;
 		padding: 15px;
 	}
 	/*Banner home*/
@@ -543,11 +546,32 @@ a:hover .subcategory-layer2 {
 	}
 	/*Fin banner home*/
 	#widget-home, #widget-progreso, #widget-categorias{
-		overflow: auto;
+		margin-bottom: 60px;
+	}
+	div#widget-progreso {
+		padding: 10px;
+		background: #fff;
+		text-align: center;
+		-moz-box-shadow: 0px 0px 8px #c7c7c7;
+		-webkit-box-shadow: 0px 0px 8px #c7c7c7;
+		box-shadow: 0px 0px 8px #c7c7c7;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+	}
+	.titulo-avance{
+		color: #1E66A1;
+		margin-top: 0px;
 	}
 	.article{
-		margin: 2em 0em 1em 0em;
+		margin: 0em 0em 1em 0em;
 		overflow: auto;
+		-moz-box-shadow: 0px 0px 8px #c7c7c7;
+		-webkit-box-shadow: 0px 0px 8px #c7c7c7;
+		box-shadow: 0px 0px 8px #c7c7c7;
+	}
+	a.categoria{
+
 	}
 	footer.footer-article{
 		overflow: auto;

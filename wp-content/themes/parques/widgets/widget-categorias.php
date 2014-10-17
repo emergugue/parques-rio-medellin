@@ -31,17 +31,19 @@ class Widget_Categorias extends WP_Widget
 		$categories = getSubcategories($catCod);
 		?>
 		<div class="categorias">
-				<div id="primary" class="container-fluid" role="main">
+				<div id="primary" role="main">
 					<div class="content-main row">
 						<?php if( $categories ): ?>
 
 							<?php foreach ($categories as $key => $category): ?>
-								<a id="cat-<?php echo $category->cat_ID ?>"
-									class="<?php echo $category->slug ?> categoria sublink col-sm-4" 
-									href="<?php echo get_category_link($category->cat_ID) ?>">
-										<div class="subcategory-layer2"></div>
-										<h2><?php echo $category->name ?></h2>
-								</a>
+								<div class="col-sm-4">
+									<a id="cat-<?php echo $category->cat_ID ?>"
+										class="<?php echo $category->slug ?> categoria sublink" 
+										href="<?php echo get_category_link($category->cat_ID) ?>">
+											<div class="subcategory-layer2"></div>
+											<h2><?php echo $category->name ?></h2>
+									</a>
+								</div>
 
 							<?php endforeach; ?>
 

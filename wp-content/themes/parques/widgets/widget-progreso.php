@@ -25,7 +25,7 @@ class Widget_Progreso extends WP_Widget
 		extract($args);
 		echo $before_widget;
 		?>
-		<h2 class="titulo-principal">Así va el avance del proyecto</h2>
+		<h2 class="titulo-avance">Así va el avance del proyecto</h2>
 		<div class="progress">
 			<div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
 				<span class="sr-only">20% Completo</span>
