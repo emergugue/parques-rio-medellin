@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" role="article" class="article col-sm-4">
+<article id="post-<?php the_ID(); ?>" role="article" class="article">
 	<header>
 		<time><?php echo get_the_date() ?></time>
 		<figure class="image-article">
@@ -12,7 +12,7 @@
 	</section>
 	<footer class="footer-article">
 		<a href="<?php esc_url(the_permalink()) ?>" class="link-leer-mas" >
-			<div class="col-sm-6 leer-mas">
+			<div class="leer-mas">
 				Leer toda la noticia
 			</div>
 		</a>

@@ -545,6 +545,13 @@ a:hover .subcategory-layer2 {
 	#widget-home, #widget-progreso, #widget-categorias{
 		overflow: auto;
 	}
+	.article{
+		margin: 2em 0em 1em 0em;
+		overflow: auto;
+	}
+	footer.footer-article{
+		overflow: auto;
+	}
 	@media (min-width: 992px){
 	/*----------------Header content-------------*/
 		#main-logo a {

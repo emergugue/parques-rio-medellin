@@ -29,14 +29,14 @@ class Widget_Home extends WP_Widget
 		$the_query = new WP_Query($args);
 		?>
 		<h2 class="titulo-principal">Últimas noticias</h2>
-		<?php if( $the_query->have_posts() ): 
-				while ( $the_query->have_posts() ) : $the_query->the_post()
-		?>
-				<div class="content-main">
+		<?php if( $the_query->have_posts() ):?>
+		<div class="row-fluid">
+		<?php while ( $the_query->have_posts() ) : $the_query->the_post()?>
+				<div class="content-main col-sm-4">
 					<?php get_template_part( 'content-widget',get_post_format() ); ?>
 				</div>
-
 			<?php endwhile; ?>
+		</div>
 		<?php endif; ?>
 
 		<?php
