@@ -14,7 +14,7 @@
 		}
 		?>
 	</div>
-	<h1 class="page-title">
+	<h1 class="titulo-principal">
 
 		<?php if (is_category())
 		{
@@ -41,7 +41,7 @@
 	</h1>
 </header><!-- .page-header -->
 
-<div id="primary" class="container-fluid" role="main">
+<div id="primary" role="main">
 	
 
 	<div >

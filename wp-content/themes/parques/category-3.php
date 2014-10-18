@@ -17,7 +17,7 @@ get_header();
 		}
 		?>
 	</div>
-	<h1 class="page-title">
+	<h1 class="titulo-principal">
 
 		<?php if (is_category())
 		{

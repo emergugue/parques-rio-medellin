@@ -11,10 +11,8 @@
 		<h3 class="title-article2"> <?php echo get_the_title() ?> </h3>
 	</section>
 	<footer class="footer-article">
-		<a href="<?php esc_url(the_permalink()) ?>" class="link-leer-mas" >
-			<div class="leer-mas">
-				Leer toda la noticia
-			</div>
+		<a href="<?php esc_url(the_permalink()) ?>" class="leer-mas" >
+			Leer toda la noticia
 		</a>
 	</footer>
 	

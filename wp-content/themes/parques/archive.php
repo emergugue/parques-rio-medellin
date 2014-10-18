@@ -25,7 +25,7 @@ else
 }
 ?>
 
-<div id="primary" class="container-fluid">
+<div id="primary">
 	<div class="site-content <?php echo $col ?>" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -38,7 +38,7 @@ else
 					}
 					?>
 				</div>
-				<h1 class="page-title">
+				<h1 class="titulo-principal">
 				<?php if (is_category())
 						{
 						single_cat_title() ;

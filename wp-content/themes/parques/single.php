@@ -19,7 +19,7 @@ get_header(); ?>
 </header><!-- .page-header -->
 
 
-<div id="primary" class="container-fluid">
+<div id="primary">
 	<div class="site-content col-sm-8" role="main" >
 			<!-- categoria diferente galeria -->
 			<?php if (! in_category( 11 ) ): ?>

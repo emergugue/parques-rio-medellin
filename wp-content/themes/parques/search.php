@@ -12,7 +12,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php echo esc_attr(get_search_query()) ?> </h1>
+				<h1 class="titulo-principal"><?php echo esc_attr(get_search_query()) ?> </h1>
 			</header><!-- .page-header -->
 
 			<?php while ( have_posts() ) : the_post() ?>

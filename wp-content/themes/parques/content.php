@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" role="article" class="article row">
+<article id="post-<?php the_ID(); ?>" role="article" class="article article-blog row-fluid">
 	<header>
 		<time><?php echo get_the_date() ?></time>
 		<figure class="image-article">
@@ -27,12 +27,9 @@
 		</div>
 	</section>
 	<footer class="footer-article">
-		<a href="<?php esc_url(the_permalink()) ?>" class="link-leer-mas" >
-			<div class="col-sm-4 leer-mas">
+		<a href="<?php esc_url(the_permalink()) ?>" class="leer-mas" >
 				Leer toda la noticia
-			</div>
 		</a>
-		<div class="line-inf col-sm-12"></div>
 	</footer>
 	
 </article><!-- end article -->

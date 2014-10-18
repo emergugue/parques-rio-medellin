@@ -5,11 +5,11 @@
 		</div>
 
 		<div class="entrada-titulo">
-			<h1><?php the_title(); ?></h1>
+			<h1 class="titulo-principal"><?php the_title(); ?></h1>
 		</div>
 	</header>
 
-	<section class="entrada-contenido row">
+	<section class="entrada-contenido">
 		<div>
 			<!-- Contenido del post -->
 			<?php the_content(); ?>

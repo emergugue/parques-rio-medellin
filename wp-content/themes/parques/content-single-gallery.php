@@ -17,7 +17,7 @@
 
 	</header>
 
-	<section class="entrada-contenido row">
+	<section class="entrada-contenido">
 		<div>
 			<!-- Contenido del post -->
 			<?php the_content(); ?>
