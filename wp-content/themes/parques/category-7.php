@@ -47,7 +47,9 @@ get_header();
 <div id="primary" class="container-fluid" role="main">
 	
 	<div class="cat-descripcion">
-		<p><?php echo category_description(); ?> </p>
+		<!-- Contenido del post -->
+		<?php the_content(); ?>
+
 	</div>
 
 	<?php
