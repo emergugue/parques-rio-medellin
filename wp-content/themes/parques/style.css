@@ -554,7 +554,7 @@ overflow: auto;
 	.navbar-default .navbar-nav>li>a:hover{
 		background-color: #0087db !important;
 	}
-	.navbar-default .navbar-nav>li>a.current{
+	.navbar-default .navbar-nav>li.current-menu-item>a{
 		background-color: #FEC045 !important;
 	}
 	form.navbar-form{
