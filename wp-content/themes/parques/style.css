@@ -228,6 +228,19 @@ footer p{
 #widget-home{
 	margin-bottom: 60px;
 }
+#widget-home article figure{
+	height: 250px;
+	overflow: hidden;
+}
+#widget-home article figure a{
+	display: block;
+	height: 220px;
+	text-align: center;
+}
+#widget-home article figure a img{
+	width: 100%;
+	height: auto;
+}
 .titulo-principal{
 	background: #1E66A1;
 	padding: 0.5em;
@@ -257,7 +270,7 @@ footer p{
 	font-weight: bold;
 }
 .title-article2{
-	font-size: 1.8em;
+	font-size: 2em;
 	font-weight: bold;
 }
 .article section span
@@ -278,9 +291,10 @@ footer.footer-article {
 	margin-top: 10px;
 	color: #fff;
 	list-style: none;
-	padding: 1em;
+	padding: 0.5em;
 	width: 100%;
 	display: block;
+	font-size: 2em;
 }
 a:hover.leer-mas{
 	background: #D99935;
@@ -300,7 +314,16 @@ a:hover.leer-mas{
 	margin-top: 0px;
 	margin-bottom: 40px;
 }
-
+.g-plus{
+	width: 250px;
+}
+.share-content{
+	width: 20%;
+	margin: 10px auto;
+}
+.twitter .share-content {
+	margin-top: 20px;
+}
 /*Estilos de recuadros*/
 a.categoria{
 	display: block;
@@ -337,17 +360,19 @@ a:hover .subcategory-layer2 {
 /*Fin estilos de recuadros*/
 .widget-social
 {
-	height: 40px;
 	margin-top: 25px;
 	background-color: #FCC342;
 }
-
+.widget-social .text {
+overflow: auto;
+}
 .widget-social .text span
 {
 	color: #fff;
 	font-size: 18px;
 	display: block;
     text-align: center;
+    margin: 15px 0;
 }
 .page-header{
 	margin-top: 0px !important;
@@ -526,6 +551,12 @@ a:hover .subcategory-layer2 {
 	.navbar-default .navbar-nav>li>a {
 		border-bottom: none;
 	}
+	.navbar-default .navbar-nav>li>a:hover{
+		background-color: #0087db !important;
+	}
+	.navbar-default .navbar-nav>li>a.current{
+		background-color: #FEC045 !important;
+	}
 	form.navbar-form{
 		overflow: inherit;
 		width: 120%;
@@ -572,6 +603,9 @@ a:hover .subcategory-layer2 {
 	#widget-home, #widget-progreso, #widget-categorias{
 		margin-bottom: 60px;
 	}
+	#widget-home article figure{
+		height: 130px;
+	}
 	div#widget-progreso {
 		padding: 10px;
 		background: #fff;
@@ -596,6 +630,12 @@ a:hover .subcategory-layer2 {
 	}
 	a.categoria{
 
+	}
+	.twitter .share-content {
+		margin-top: 10px;
+	}
+	.googleplus .share-content {
+		margin-top: 15px;
 	}
 	footer.footer-article{
 		overflow: auto;
@@ -622,7 +662,13 @@ a:hover .subcategory-layer2 {
 		}
 		form.navbar-form{
 		width: 100%;
-	}
+		}
+		#widget-home article figure{
+			height: 175px;
+		}
+		.logo-footer{
+			margin: 18% 0 0 0;
+		}
 	}
 	@media (min-width: 1200px){
 		.header-content{
@@ -634,5 +680,9 @@ a:hover .subcategory-layer2 {
 		}
 		.navbar-default .navbar-nav>li>a{
 			font-size: 1.9em;
+		}
+		#widget-home article figure{
+			height: 225px;
+			overflow: hidden;
 		}
 	}

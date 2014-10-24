@@ -16,6 +16,7 @@ function parques_setup()
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 672, 372, true );
 	add_image_size( 'parques-full-width', 1038, 576, true );
+	add_image_size( 'thumbnails-home', 9999, 500, false );
 
 	// Usamos el nav_menu
 	register_nav_menu( 'main-menu', 'Menú principal' );
