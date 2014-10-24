@@ -221,6 +221,7 @@ function parquesWidgets()
 	include_once(TEMPLATEPATH.'/widgets/widget-progreso.php');
 	include_once(TEMPLATEPATH.'/widgets/widget-categorias.php');
 	include_once(TEMPLATEPATH.'/widgets/widget-banner.php');
+	include_once(TEMPLATEPATH.'/widgets/widget-timelines.php');
 	//add widget
  	register_widget( 'Widget_Texto' );
  	register_widget( 'Widget_Social' );
@@ -228,6 +229,7 @@ function parquesWidgets()
  	register_widget( 'Widget_Progreso' );
  	register_widget( 'Widget_Categorias' );
  	register_widget( 'Widget_Banner' );
+ 	register_widget( 'Widget_Timelines' );
 
 }
 add_action( 'widgets_init', 'parquesWidgets' );

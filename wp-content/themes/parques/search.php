@@ -36,7 +36,10 @@ get_header(); ?>
 		<?php endif; ?>
 	</div><!-- #content -->
 	<!-- Bloque oculto en moviles. -->
-	<div class="sidebar hidden-xs  col-sm-4"></div>
+	<div class="sidebar hidden-xs  col-sm-4">
+		<!-- Bloque oculto en moviles. -->
+		<?php dynamic_sidebar('sidebar');?>
+	</div>
 
 </div><!-- #primary -->
 <?php

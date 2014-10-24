@@ -51,7 +51,8 @@ get_header(); ?>
 	</div>
 	
 	<div class="sidebar hidden-xs  col-sm-4" >
-
+		<!-- Bloque oculto en moviles. -->
+		<?php dynamic_sidebar('sidebar');?>
 	</div>
 
 
