@@ -25,10 +25,6 @@ class Widget_Timelines extends WP_Widget
 		extract($args);
 		echo $before_widget;
 
-
-          
-          
-		
 		?>
 		<div class="timelines">
 			<div class="timeline-twitter">
@@ -39,7 +35,6 @@ class Widget_Timelines extends WP_Widget
 			<div class="facebook">
 			</div>
 		</div>	
-
 		<?php
 		echo $after_widget;
 	}
