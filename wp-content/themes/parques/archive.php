@@ -67,29 +67,31 @@ else
 					<div class="cat-descripcion">
 						<p><?php echo category_description(); ?> </p>
 					</div>
-
-					<?php while ( have_posts() ) : the_post() ?>
-						<div class="content-main">
-							<?php get_template_part( 'content-category', get_post_format() ); ?>
-						</div>
-					<?php endwhile; ?>
+					<div class="content-main">
+						<?php while ( have_posts() ) : the_post() ?>
+							
+								<?php get_template_part( 'content-category', get_post_format() ); ?>
+						<?php endwhile; ?>
+					</div>
 			<?php else: ?>
 
 				<!-- caregoria: galerias -->
 				<?php if( in_category(11)): ?>
-
-					<?php while ( have_posts() ) : the_post() ?>
-						<div class="content-main">
-							<?php get_template_part( 'content-gallery', get_post_format() ); ?>
-						</div>
-					<?php endwhile; ?>
-
+					<div class="content-main">
+						<?php while ( have_posts() ) : the_post() ?>
+							
+								<?php get_template_part( 'content-gallery', get_post_format() ); ?>
+							
+						<?php endwhile; ?>
+					</div>
 				<?php else: ?>
+				<div class="content-main">
 					<?php while ( have_posts() ) : the_post() ?>
-						<div class="content-main">
+						
 							<?php get_template_part( 'content', get_post_format() ); ?>
-						</div>
+					
 					<?php endwhile; ?>
+				</div>
 				<?php endif;  ?>
 			<?php endif; ?>	
 

@@ -1,3 +1,5 @@
+<?php print_r($post); ?>
+
 <a id="post-<?php the_ID(); ?>" class="col-sm-4" href="<?php esc_url(the_permalink()) ?>">
 	<article  class="gallery">
 		<header>
