@@ -330,7 +330,7 @@ a.categoria{
 	width: 100%;
 	height: 250px;
 	position: relative;
-	background: #7a7a7a;
+	background-color: #7a7a7a;
 	margin-bottom: 15px;
 	padding: 0px;
 	overflow: hidden;
@@ -346,7 +346,7 @@ a.categoria h2{
 .subcategory-layer2 {
 	width: 100%;
 	height: 250px;
-	background: yellow;
+	background: rgba(0, 0, 0, 0.5);
 	position: absolute;
 	bottom: -250px;
 	-moz-transition: all 0.5s ease;
@@ -356,6 +356,26 @@ a.categoria h2{
 }
 a:hover .subcategory-layer2 {
 	bottom: 0px;
+}
+.componente-social{
+	background: url(images/componente-social.jpg) no-repeat top center;
+	-webkit-background-size: cover;
+    background-size: cover
+}
+.componente-ambiental{
+	background: url(images/componente-ambiental.jpg) no-repeat top center;
+	-webkit-background-size: cover;
+    background-size: cover
+}
+.componente-movilidad{
+	background: url(images/componente-movilidad.jpg) no-repeat top center;
+	-webkit-background-size: cover;
+    background-size: cover
+}
+.componente-tecnico{
+	background: url(images/componente-tecnico.jpg) no-repeat top center;
+	-webkit-background-size: cover;
+    background-size: cover
 }
 /*Fin estilos de recuadros*/
 .widget-social
@@ -545,11 +565,13 @@ overflow: auto;
 	}
 	.nav>li {
 		display: inline-block;
-		width: 16%;
+		width: auto;
 		border-bottom: none;
 	}
 	.navbar-default .navbar-nav>li>a {
 		border-bottom: none;
+		padding: 20px 9px;
+		font-size: 1.3em;
 	}
 	.navbar-default .navbar-nav>li>a:hover{
 		background-color: #0087db !important;
@@ -658,7 +680,11 @@ overflow: auto;
 			height: 105px;
 		}
 		.nav>li{
-			width: 16%;
+			width: auto;
+		}
+		.navbar-default .navbar-nav>li>a {
+			border-bottom: none;
+			padding: 20px 20px;
 		}
 		form.navbar-form{
 		width: 100%;
@@ -671,6 +697,10 @@ overflow: auto;
 		}
 	}
 	@media (min-width: 1200px){
+		.navbar-default .navbar-nav>li>a {
+			border-bottom: none;
+			padding: 20px 25px;
+		}
 		.header-content{
 			-webkit-background-size: cover;
 			background-size: cover;
@@ -679,7 +709,7 @@ overflow: auto;
 			width: 80%;
 		}
 		.navbar-default .navbar-nav>li>a{
-			font-size: 1.9em;
+			font-size: 1.6em;
 		}
 		#widget-home article figure{
 			height: 225px;
