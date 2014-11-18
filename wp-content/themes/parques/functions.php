@@ -222,6 +222,8 @@ function parquesWidgets()
 	include_once(TEMPLATEPATH.'/widgets/widget-categorias.php');
 	include_once(TEMPLATEPATH.'/widgets/widget-banner.php');
 	include_once(TEMPLATEPATH.'/widgets/widget-timelines.php');
+	include_once(TEMPLATEPATH.'/widgets/widget-flickr.php');
+
 	//add widget
  	register_widget( 'Widget_Texto' );
  	register_widget( 'Widget_Social' );
@@ -230,6 +232,8 @@ function parquesWidgets()
  	register_widget( 'Widget_Categorias' );
  	register_widget( 'Widget_Banner' );
  	register_widget( 'Widget_Timelines' );
+ 	register_widget( 'Widget_Flickr' );
+
 
 }
 add_action( 'widgets_init', 'parquesWidgets' );
