@@ -437,8 +437,23 @@ overflow: auto;
 	margin: 10px auto;
 	text-align: center;
 }
-.twitter .share-content {
-	margin-top: 20px;
+.share-content a{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-indent: -9999px;
+}
+.tw-share{
+	background: url(images/tw-share.png) no-repeat;
+	background-size: cover;
+}
+.fb-share{
+	background: url(images/fb-share.png) no-repeat;
+	background-size: cover;
+}
+.gp-share{
+	background: url(images/gp-share.png) no-repeat;
+	background-size: cover;
 }
 .page-header{
 	margin-top: 0px !important;
@@ -708,13 +723,10 @@ article.gallery{
 
 	}
 	.contenedor-compartir{
-		width: 65%;
+		width: 50%;
 	}
 	.twitter .share-content {
 		margin-top: 10px;
-	}
-	.googleplus .share-content {
-		margin-top: 15px;
 	}
 	footer.footer-article{
 		overflow: auto;
@@ -752,8 +764,12 @@ article.gallery{
 		.logo-footer{
 			margin: 18% 0 0 0;
 		}
+		.share-content a{
+			width: 40px;
+			height: 40px;
+		}
 		.contenedor-compartir{
-			width: 50%;
+			width: 40%;
 		}
 	}
 	@media (min-width: 1200px){

@@ -35,19 +35,19 @@ class Widget_social extends WP_Widget
 			<div class="social-buttons row">
 				<div class="googleplus item-social col-sm-4">
 					<div class="share-content">
-						<div class="g-plus" data-action="share" data-annotation="none" data-height="15"></div>
+						<a class="gp-share" target="_blank" href="https://plus.google.com/share?url=<?php echo $url ?>">G+</a>
 					</div>
 				</div>
 
 				<div class="facebook item-social col-sm-4">
 					<div class="share-content">
-						<div class="fb-share-button" ></div>
+						<a class="fb-share" target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<?php echo $url ?>;p[images][0]=&amp;p[title]=<?php echo wp_title('-', false); ?>&amp;p">Facebook</a>
 					</div>
 				</div>
 
 				<div class="twitter item-social col-sm-4">
 					<div class="share-content">
-						<a target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo $url ?>&amp;text=<?php echo wp_title('-', false); ?>&amp;via=ParquesdelRio"><img src="http://logicum.co/wp-content/uploads/2013/01/TwitterTweet.jpg"></a>
+						<a class="tw-share" target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo $url ?>&amp;text=<?php echo wp_title('-', false); ?>&amp;via=ParquesdelRio">Twitter</a>
 					</div>
 
 				</div>
