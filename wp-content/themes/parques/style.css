@@ -519,10 +519,12 @@ article.gallery{
 
 .site-content .entrada-encabezado-galeria
 {
-	border: 1px solid rgba(117, 117, 117, 1) ;
+	/*border: 1px solid rgba(117, 117, 117, 1) ;*/
 	margin-bottom: 20px;
 }
-
+.entrada-encabezado-galeria h1{
+	margin: 0 0 0 0;
+}
 .site-content .entrada-encabezado-galeria .entrada-titulo
 {
 	text-align: left;
@@ -539,6 +541,7 @@ article.gallery{
 {
 	text-align: justify;
 }
+
 @media (min-width: 768px) {
 	/*------------------General styles---------------*/
 	body{
