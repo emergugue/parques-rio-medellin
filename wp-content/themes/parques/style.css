@@ -247,6 +247,21 @@ footer p{
 	color: #fff;
 	border-right: 8px solid #FCC046;
 }
+a.btn-progreso{
+	background-color: #FEC045;
+	margin: 30px auto 15px auto;
+	color: #fff;
+	list-style: none;
+	padding: 0.4em;
+	width: 25%;
+	display: block;
+	font-size: 1.2em;
+}
+a:hover.btn-progreso{
+	text-decoration: none;
+	color: #fff;
+	background-color: #D99935;
+}
 .article{
 	padding: 1em;
 	background: #fff;
