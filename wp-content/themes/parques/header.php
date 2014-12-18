@@ -33,9 +33,9 @@
 					<div class="hidden-xs col-sm-3 col-md-4 header-rigth">
 						<div class="redes-sociales">
 							<ul>
-								<li><a href="mailto:emerson.gutierrez@telemedellin.tv" class="mail-header" target="_blank"></a></li>
-								<li><a href="https://twitter.com/ParqRioMedellin" class="tw-header" target="_blank"></a></li>
-								<li><a href="https://www.facebook.com/AmigosdelParquedelRioMedellin" class="fb-header" target="_blank"></a></li>
+								<li><a href="mailto:parquedelriomedellin@gmail.com" class="mail-header" target="_blank"></a></li>
+								<li><a href="https://www.facebook.com/AmigosdelParquedelRioMedellin" class="tw-header" target="_blank"></a></li>
+								<li><a href="https://twitter.com/ParqRioMedellin" class="fb-header" target="_blank"></a></li>
 							</ul>
 						</div>
 						<div class="alcaldia-header">
