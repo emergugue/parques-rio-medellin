@@ -89,7 +89,7 @@ function edit_user( $user_id = 0 ) {
 		if ( isset( $_POST[$method] ))
 			$user->$method = sanitize_text_field( $_POST[$method] );
 	}
-
+	
 	if ( $update ) {
 		$user->rich_editing = isset( $_POST['rich_editing'] ) && 'false' == $_POST['rich_editing'] ? 'false' : 'true';
 		$user->admin_color = isset( $_POST['admin_color'] ) ? sanitize_text_field( $_POST['admin_color'] ) : 'fresh';
