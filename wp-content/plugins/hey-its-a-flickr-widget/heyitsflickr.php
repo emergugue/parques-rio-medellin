@@ -109,16 +109,6 @@ class Hey_Its_Flickr extends WP_Widget {
 		 		if ( !empty( $hif_title ) ) { echo $before_title . $hif_title . $after_title; }
 
 			?>			
-			<style type="text/css">
-			.sidebar #hey_its_flickr-3 #flickr-images{overflow: hidden;}
-			.sidebar #hey_its_flickr-3 #flickr-images div#marco-flickr{overflow: hidden; width: 260px; display: inline-block; vertical-align: middle; margin-right: 0 !important; margin-bottom: 0 !important; margin-top: 20px;}
-			.sidebar #hey_its_flickr-3 #flickr-images ul{padding: 0px; position: relative; width: 100%;}
-			.sidebar #hey_its_flickr-3 #flickr-images ul li{float: left; padding: 0px; position: relative; list-style: none; width: 240px;}
-			.sidebar #hey_its_flickr-3 #flickr-images ul li img{margin: 0; position: relative; float: left; z-index: 1; max-width: none;}
-			.sidebar #hey_its_flickr-3 #flickr-images ul li a {display: inline-block; text-align: center; clear: both;}
-			.sidebar #hey_its_flickr-3 #flickr-images  a.next, #sidebar #flickr-images  a.prev{cursor: pointer; display: inline-block; vertical-align: middle; font-size: 3em; margin: 0 2px;}
-			.sidebar #hey_its_flickr-3 #flickr-images  .prev {font-size: 3em; }
-			</style>
 			<div id="flickr-images">
 				<a href='#' class='prev'>&laquo;</a>
 				<div id='marco-flickr'>

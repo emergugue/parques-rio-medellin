@@ -574,7 +574,27 @@ article.gallery{
 {
 	text-align: justify;
 }
-
+/*Flickr widget*/
+.sidebar #hey_its_flickr-3 #flickr-images{position: relative;}
+.sidebar #hey_its_flickr-3 #flickr-images div#marco-flickr{overflow: hidden; width: 215px; display: inline-block; vertical-align: middle; margin-right: 0 !important; margin-bottom: 0 !important; margin-top: 20px;}
+.sidebar #hey_its_flickr-3 #flickr-images ul{padding: 0px; position: relative; width: 100%;}
+.sidebar #hey_its_flickr-3 #flickr-images ul li{float: left; padding: 0px; position: relative; list-style: none; width: 240px;}
+.sidebar #hey_its_flickr-3 #flickr-images ul li img{margin: 0; position: relative; float: left; z-index: 1; max-width: none;}
+.sidebar #hey_its_flickr-3 #flickr-images ul li a {display: inline-block; text-align: center; clear: both;}
+.sidebar #hey_its_flickr-3 #flickr-images  a.next, #sidebar #flickr-images  a.prev{cursor: pointer; display: inline-block; vertical-align: middle; font-size: 3em; margin: 0 2px;}
+.sidebar #hey_its_flickr-3 #flickr-images .prev {
+	font-size: 3em;
+	position: absolute;
+	top: 40%;
+	z-index: 5;
+	left: -17px;
+}
+.sidebar #hey_its_flickr-3 #flickr-images  a.next {
+	position: absolute;
+	top: 40%;
+	z-index: 5;
+	right: -17px;
+}
 @media (min-width: 768px) {
 	/*------------------General styles---------------*/
 	body{
@@ -767,64 +787,79 @@ article.gallery{
 	footer.footer-article{
 		overflow: auto;
 	}
-	@media (min-width: 992px){
-	/*----------------Header content-------------*/
-		#main-logo a {
-			height: 180px;
-			width: 400px;
-			margin: 59px 0 15px 0;
-		}
-		.header-content{
-			-webkit-background-size: cover;
-			background-size: cover;
-		}
-		.redes-sociales{
-			margin-bottom: 80px;
-		}
-		.alcaldia-header a{
-			height: 105px;
-		}
-		.nav>li{
-			width: auto;
-		}
-		.navbar-default .navbar-nav>li>a {
-			border-bottom: none;
-			padding: 20px 20px;
-		}
-		form.navbar-form{
-		width: 100%;
-		}
-		#widget-home article figure{
-			height: 175px;
-		}
-		.logo-footer{
-			margin: 18% 0 0 0;
-		}
-		.share-content a{
-			width: 40px;
-			height: 40px;
-		}
-		.contenedor-compartir{
-			width: 40%;
-		}
+@media (min-width: 992px){
+/*----------------Header content-------------*/
+	#main-logo a {
+		height: 180px;
+		width: 400px;
+		margin: 59px 0 15px 0;
 	}
-	@media (min-width: 1200px){
-		.navbar-default .navbar-nav>li>a {
-			border-bottom: none;
-			padding: 20px 25px;
-		}
-		.header-content{
-			-webkit-background-size: cover;
-			background-size: cover;
-		}
-		form.navbar-form{
-			width: 80%;
-		}
-		.navbar-default .navbar-nav>li>a{
-			font-size: 1.6em;
-		}
-		#widget-home article figure{
-			height: 225px;
-			overflow: hidden;
-		}
+	.header-content{
+		-webkit-background-size: cover;
+		background-size: cover;
 	}
+	.redes-sociales{
+		margin-bottom: 80px;
+	}
+	.alcaldia-header a{
+		height: 105px;
+	}
+	.nav>li{
+		width: auto;
+	}
+	.navbar-default .navbar-nav>li>a {
+		border-bottom: none;
+		padding: 20px 20px;
+	}
+	form.navbar-form{
+	width: 100%;
+	}
+	#widget-home article figure{
+		height: 175px;
+	}
+	.logo-footer{
+		margin: 18% 0 0 0;
+	}
+	.share-content a{
+		width: 40px;
+		height: 40px;
+	}
+	.contenedor-compartir{
+		width: 40%;
+	}
+	.sidebar #hey_its_flickr-3 #flickr-images div#marco-flickr {
+		overflow: hidden;
+		width: 240px;
+		vertical-align: middle;
+		margin-top: 20px;
+		margin-right: auto !important;
+		margin-left: auto !important;
+		display: block;
+	}
+}
+@media (min-width: 1200px){
+	.navbar-default .navbar-nav>li>a {
+		border-bottom: none;
+		padding: 20px 25px;
+	}
+	.header-content{
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	form.navbar-form{
+		width: 80%;
+	}
+	.navbar-default .navbar-nav>li>a{
+		font-size: 1.6em;
+	}
+	#widget-home article figure{
+		height: 225px;
+		overflow: hidden;
+	}
+	.sidebar #hey_its_flickr-3 #flickr-images .prev {
+		left: 0px;
+	}
+	.sidebar #hey_its_flickr-3 #flickr-images  a.next {
+		right: 0px;
+	}
+}
