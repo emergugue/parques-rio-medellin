@@ -59,7 +59,7 @@ class Widget_Progreso extends WP_Widget
 				<span class="sr-only"><?php echo $avance ?>% Completo</span>
 			</div>
 		</div>
-		<a href="#" class="btn-progreso">Ver el proyecto</a>
+		<a href="/parques-rio-medellin/asi-va-el-avance-de-parques-del-rio-medellin" class="btn-progreso">Ver el proyecto</a>
 		<?php
 		echo $after_widget;
 	}

@@ -7,7 +7,7 @@
 					<ul >
 						<li><a href="http://parquedelriomedellin.co/" class="web" target="_blank">www.parquedelriomedellin</a></li>
 						<li><a href="https://www.facebook.com/AmigosdelParquedelRioMedellin" class="facebook" target="_blank">AmigosDelParqueDelRíoMedellín</a></li>
-						<li><a href="https://twitter.com/ParqRioMedellin" class="twitter" target="_blank">@ParqRíoMedellín</a></li>
+						<li><a href="https://twitter.com/ParquesdelRio" class="twitter" target="_blank">@ParqRíoMedellín</a></li>
 						<li><a href="http://instagram.com/parquesdelriomedellin" class="instagram" target="_blank">parquedelriomedellin</a></li>
 						<li class="hidden-xs"><a href="#" class="tel">(57-4) 576 76 30 Ext. 153</a></li>
 						<li class="visible-xs"><a href="tel:0345767630" class="tel">(57-4) 576 76 30 Ext. 153</a></li>
