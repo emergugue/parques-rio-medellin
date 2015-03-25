@@ -589,7 +589,30 @@ article.gallery{
 	z-index: 5;
 	left: -17px;
 }
+
+/*Flickr widget*/
+.sidebar #hey_its_flickr-2 #flickr-images{position: relative;}
+.sidebar #hey_its_flickr-2 #flickr-images div#marco-flickr{overflow: hidden; width: 215px; display: inline-block; vertical-align: middle; margin-right: 0 !important; margin-bottom: 0 !important; margin-top: 20px;}
+.sidebar #hey_its_flickr-2 #flickr-images ul{padding: 0px; position: relative; width: 100%;}
+.sidebar #hey_its_flickr-2 #flickr-images ul li{float: left; padding: 0px; position: relative; list-style: none; width: 240px;}
+.sidebar #hey_its_flickr-2 #flickr-images ul li img{margin: 0; position: relative; float: left; z-index: 1; max-width: none;}
+.sidebar #hey_its_flickr-2 #flickr-images ul li a {display: inline-block; text-align: center; clear: both;}
+.sidebar #hey_its_flickr-2 #flickr-images  a.next, #sidebar #flickr-images  a.prev{cursor: pointer; display: inline-block; vertical-align: middle; font-size: 3em; margin: 0 2px;}
+.sidebar #hey_its_flickr-2 #flickr-images .prev {
+	font-size: 3em;
+	position: absolute;
+	top: 40%;
+	z-index: 5;
+	left: -17px;
+}
 .sidebar #hey_its_flickr-3 #flickr-images  a.next {
+	position: absolute;
+	top: 40%;
+	z-index: 5;
+	right: -17px;
+}
+
+.sidebar #hey_its_flickr-2 #flickr-images  a.next {
 	position: absolute;
 	top: 40%;
 	z-index: 5;
@@ -836,6 +859,15 @@ article.gallery{
 		margin-left: auto !important;
 		display: block;
 	}
+	.sidebar #hey_its_flickr-2 #flickr-images div#marco-flickr {
+		overflow: hidden;
+		width: 240px;
+		vertical-align: middle;
+		margin-top: 20px;
+		margin-right: auto !important;
+		margin-left: auto !important;
+		display: block;
+	}
 }
 @media (min-width: 1200px){
 	.navbar-default .navbar-nav>li>a {
@@ -860,6 +892,12 @@ article.gallery{
 		left: 0px;
 	}
 	.sidebar #hey_its_flickr-3 #flickr-images  a.next {
+		right: 0px;
+	}
+	.sidebar #hey_its_flickr-2 #flickr-images .prev {
+		left: 0px;
+	}
+	.sidebar #hey_its_flickr-2 #flickr-images  a.next {
 		right: 0px;
 	}
 }

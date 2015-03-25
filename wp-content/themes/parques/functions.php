@@ -240,6 +240,7 @@ add_action( 'widgets_init', 'parquesWidgets' );
 
 
 
+
 /**
 * bt_pagination
 * Funcion para crear paginado adaptado al estilo de boostrap
