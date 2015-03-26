@@ -20,42 +20,57 @@ get_header(); ?>
 
 
 <div id="primary">
+<?php if (! in_category( 'narrativas' ) ): ?>
 	<div class="site-content col-sm-8" role="main" >
-			<!-- categoria diferente galeria -->
-			<?php if (! in_category( 11 ) ): ?>
+		<!-- categoria diferente galeria -->
+		<?php if (! in_category( 11 ) ): ?>
 
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-						<?php get_template_part( 'content-single', get_post_format() ); ?>
-					<?php endwhile; ?>
-				<?php endif; ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php get_template_part( 'content-single', get_post_format() ); ?>
+				<?php endwhile; ?>
+			<?php endif; ?>
 
-			<?php else: ?>
+		<?php else: ?>
 
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-						<?php get_template_part( 'content-single-gallery', get_post_format() ); ?>
-					<?php endwhile; ?>
-				<?php endif; ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php get_template_part( 'content-single-gallery', get_post_format() ); ?>
+				<?php endwhile; ?>
+			<?php endif; ?>
 
-			<?php endif; ?>		
+		<?php endif; ?>		
 
 		<div>
-		<?php if( in_category( 2 ) ): ?>
+			<?php if( in_category( 2 ) ): ?>
 			<div class="comments"> 
 				<?php  echo do_shortcode('[vivafbcomment]'); ?>
 			</div>
-		<?php endif; ?>
+			<?php endif; ?>
 
 			<?php dynamic_sidebar( "widget-social" ); ?>
 		</div>
-
 	</div>
-	
+
 	<div class="sidebar hidden-xs  col-sm-4" >
 		<!-- Bloque oculto en moviles. -->
 		<?php dynamic_sidebar('sidebar');?>
 	</div>
+	
+<?php else: ?>
+
+	<div class="sidebar col-sm-3"><?php dynamic_sidebar('nav-menu-narrativa');?></div>
+	<div class="site-content col-sm-9" role="main" >
+		<!-- categoria diferente galeria -->
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php get_template_part( 'content-single', get_post_format() ); ?>
+			<?php endwhile; ?>
+		<?php endif; ?>
+		<div>
+			<?php dynamic_sidebar( "widget-social" ); ?>
+		</div>
+	</div>
 
 
+<?php endif; ?>
 
 </div><!--primary-->
 <?php

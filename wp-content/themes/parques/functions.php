@@ -122,6 +122,16 @@ function parques_widget_init()
 			'after_widget'  => '</div>',
 		)
 	);
+
+	register_sidebar( 
+		array(
+			'id'    		=> 'nav-menu-narrativa',
+			'name'			=> "nav-menu-narrativa",
+			'description'	=> 'Sidebar',
+			'before_widget' => '<div id="%1$s" class="widget-%1$s" >',
+			'after_widget'  => '</div>',
+		)
+	);
 }
 add_action( 'widgets_init', 'parques_widget_init' );
 
@@ -223,6 +233,7 @@ function parquesWidgets()
 	include_once(TEMPLATEPATH.'/widgets/widget-banner.php');
 	include_once(TEMPLATEPATH.'/widgets/widget-timelines.php');
 	include_once(TEMPLATEPATH.'/widgets/widget-flickr.php');
+	include_once(TEMPLATEPATH.'/widgets/nav-menu-narrativas.php');
 
 	//add widget
  	register_widget( 'Widget_Texto' );
@@ -233,6 +244,7 @@ function parquesWidgets()
  	register_widget( 'Widget_Banner' );
  	register_widget( 'Widget_Timelines' );
  	register_widget( 'Widget_Flickr' );
+ 	register_widget( 'Widget_Narrativas' );
 
 
 }
