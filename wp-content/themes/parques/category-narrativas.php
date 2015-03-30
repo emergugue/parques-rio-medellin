@@ -19,32 +19,13 @@ get_header(); ?>
 					?>
 				</div>
 				<h1 class="titulo-principal">
-				<?php if (is_category())
-						{
-						single_cat_title() ;
-					 	} elseif (is_tag()) 
-					 	{
-							single_tag_title();
-						} 
-						elseif (is_author()) 
-						{
-							get_the_author_meta('display_name');
-						} elseif (is_day()) 
-						{
-							the_time('l, F j, Y');
-						} elseif (is_month()) 
-						{
-							the_time('F Y');
-						} elseif (is_year()) 
-						{
-							the_time('Y');
-						}
-				?>
+					Concurso Narrativas
 				</h1>
 			</header><!-- .page-header -->
 			<section >
 				<?php
-					echo get_the_content('');
+					$first_post = get_post(352);
+					echo  $first_post->post_content;
 				?>
 			</section>
 		<?php else : ?>

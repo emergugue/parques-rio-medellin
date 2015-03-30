@@ -103,6 +103,46 @@ form.navbar-form button.btn.btn-default{
 	top: 9px;
 	right:15px;
 }
+
+
+#narrativas-2 .menu-nav {
+    background-color: #0175be;
+    border:none;
+    border-radius:7px; 
+	-moz-border-radius:7px; /* Firefox */ 
+	-webkit-border-radius:7px; /* Safari y Chrome */ 
+}
+
+#narrativas-2 .menu-nav ul {
+    list-style: outside none none;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 3px 0;
+}
+
+#narrativas-2 .menu-nav ul li{
+	margin: 10px 0; 
+	color: #FFFFFF;
+	font-size: 1.6em;
+    font-weight: 700;
+	font-family: 'PT Sans Narrow', sans-serif!important;
+	border-bottom: 1px solid #7A7777;
+}
+#narrativas-2 .menu-nav ul .active{
+	color: #FEC045;
+	text-decoration: none;
+}
+
+#narrativas-2 .menu-nav ul li a{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#narrativas-2 .menu-nav ul li a:HOVER{
+	color : #FEC045;
+}
+
 /*--------------Footer styles-----------------*/
 footer{
 	background: #fff;

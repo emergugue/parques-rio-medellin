@@ -342,3 +342,13 @@ function new_royalslider_add_custom_skin($skins) {
       );
       return $skins;
 }
+
+
+function get_single_post_id()
+{
+    if ( is_single() )
+    {
+		$post  = get_post( );
+		return $post->ID;
+	}
+}

@@ -27,9 +27,11 @@ class Widget_Narrativas extends WP_Widget
 		echo $before_widget;
 		?>
 
-		<nav class"menu-nav">
+		<nav class="menu-nav">
 			<ul>
 				<?php 
+					$post_act_id = get_single_post_id();
+
 					$catid = get_category_by_slug('narrativas')->term_id; 
 
 				 	$args = array('cat'=>$catid, 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => '-1' ); 
@@ -37,9 +39,12 @@ class Widget_Narrativas extends WP_Widget
 
           			if ($query->have_posts()) :
           				while ($query->have_posts() ) : $query->the_post();
+          				
+          				$class = '';
+          				if( get_the_ID() == $post_act_id ) $class= 'active';
           		?>	
 						<li>
-							<a id="nav-post-<?php the_ID(); ?>" href="<?php echo esc_url(get_permalink()) ?>">
+							<a id="nav-post-<?php the_ID(); ?>" class="<? echo $class ?>" href="<?php echo esc_url(get_permalink()) ?>">
 								<?php echo get_the_title() ?>
 							</a>
 						</li>
