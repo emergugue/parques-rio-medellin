@@ -63,7 +63,7 @@ button.navbar-toggle {
 .navbar-default .navbar-nav>li>a {
 	color: #fff !important;
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 1em;
 	padding: 20px 0;
 	border-bottom: 1px solid #fff;
 	font-family: 'PT Sans Narrow', sans-serif!important;
@@ -127,7 +127,6 @@ form.navbar-form button.btn.btn-default{
 	font-size: 1.6em;
     font-weight: 700;
 	font-family: 'PT Sans Narrow', sans-serif!important;
-	border-bottom: 1px solid #7A7777;
 }
 #narrativas-2 .menu-nav ul .active{
 	color: #FEC045;
@@ -560,6 +559,12 @@ overflow: auto;
 	text-align: center;
 	margin-bottom: 30px;
 }
+
+.site-content .titulo-principal-custom .text-hidden
+{
+	display: none;
+}
+
 .site-content .entrada-contenido div p
 {
 	text-align: justify;
@@ -658,6 +663,12 @@ article.gallery{
 	z-index: 5;
 	right: -17px;
 }
+
+.wpb_accordion h3.wpb_accordion_header a 
+{
+	font-size: 24px;
+}
+
 @media (min-width: 768px) {
 	/*------------------General styles---------------*/
 	body{
@@ -759,7 +770,7 @@ article.gallery{
 	.navbar-default .navbar-nav>li>a {
 		border-bottom: none;
 		padding: 20px 9px;
-		font-size: 1.3em;
+		font-size: 1em;
 	}
 	.navbar-default .navbar-nav>li>a:hover{
 		background-color: #0087db !important;
@@ -872,7 +883,8 @@ article.gallery{
 	}
 	.navbar-default .navbar-nav>li>a {
 		border-bottom: none;
-		padding: 20px 20px;
+		padding: 20px 13px;
+		font-size: 1.3em;
 	}
 	form.navbar-form{
 	width: 100%;
@@ -912,7 +924,7 @@ article.gallery{
 @media (min-width: 1200px){
 	.navbar-default .navbar-nav>li>a {
 		border-bottom: none;
-		padding: 20px 25px;
+		padding: 20px 21px;
 	}
 	.header-content{
 		-webkit-background-size: cover;
@@ -921,9 +933,7 @@ article.gallery{
 	form.navbar-form{
 		width: 80%;
 	}
-	.navbar-default .navbar-nav>li>a{
-		font-size: 1.6em;
-	}
+	
 	#widget-home article figure{
 		height: 225px;
 		overflow: hidden;
@@ -941,3 +951,4 @@ article.gallery{
 		right: 0px;
 	}
 }
+

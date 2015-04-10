@@ -20,7 +20,7 @@ get_header(); ?>
 
 
 <div id="primary">
-<?php if (! in_category( 'narrativas' ) ): ?>
+<?php if (! in_category( 'narrativas' ) && ! in_category( 'galerias-narrativa' )  && ! in_category( 'noticias-narrativas' ) ): ?>
 	<div class="site-content col-sm-8" role="main" >
 		<!-- categoria diferente galeria -->
 		<?php if (! in_category( 11 ) ): ?>
@@ -61,7 +61,7 @@ get_header(); ?>
 	<div class="site-content col-sm-9" role="main" >
 		<!-- categoria diferente galeria -->
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<?php get_template_part( 'content-single', get_post_format() ); ?>
+			<?php get_template_part( 'content-single-page', get_post_format() ); ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
 		<div>

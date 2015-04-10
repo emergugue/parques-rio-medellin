@@ -352,3 +352,19 @@ function get_single_post_id()
 		return $post->ID;
 	}
 }
+
+function get_class_narrativas()
+{
+	$post  = get_post( );
+
+	if( $post->ID == 778 ||  $post->ID == 780 || $post->ID == 793 || $post->ID == 824 
+		|| $post->ID == 850 || $post->ID == 895 || $post->ID == 776 )
+	{
+		return $post->post_name;
+	}
+	else
+	{
+		return null;
+	}
+
+}

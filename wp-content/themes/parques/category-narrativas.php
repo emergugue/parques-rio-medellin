@@ -19,13 +19,13 @@ get_header(); ?>
 					?>
 				</div>
 				<h1 class="titulo-principal">
-					Concurso Narrativas
+					Concurso de narrativas
 				</h1>
 			</header><!-- .page-header -->
 			<section >
 				<?php
-					$first_post = get_post(352);
-					echo  $first_post->post_content;
+					$first_post = get_post_field( 'post_content', 776 ,'display');
+					echo  $first_post;
 				?>
 			</section>
 		<?php else : ?>

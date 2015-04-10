@@ -31,10 +31,11 @@ class Widget_Narrativas extends WP_Widget
 			<ul>
 				<?php 
 					$post_act_id = get_single_post_id();
+					$catnow		 = get_cat_ID; 
 
 					$catid = get_category_by_slug('narrativas')->term_id; 
 
-				 	$args = array('cat'=>$catid, 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => '-1' ); 
+				 	$args = array('category__in'=>$catid, 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => '-1' ); 
           			$query = new WP_Query( $args );
 
           			if ($query->have_posts()) :
