@@ -664,9 +664,65 @@ article.gallery{
 	right: -17px;
 }
 
+.movilidad-titulos .wpb_accordion_section:nth-child(1) h3{
+	background: #fff url(../../uploads/12.png) left center no-repeat; !important;
+ 	padding-left: 50px;
+ 	background-position-x: 8px;
+}
+.movilidad-titulos .wpb_accordion_section:nth-child(2) h3{
+	background: #fff url(../../uploads/21.png) left center no-repeat; !important;
+ 	padding-left: 50px;
+ 	background-position-x: 8px;
+}
+.movilidad-titulos .wpb_accordion_section:nth-child(3) h3{
+	background: #fff url(../../uploads/32.png) left center no-repeat; !important;
+ 	padding-left: 50px;
+ 	background-position-x: 8px;
+}
+.movilidad-titulos .wpb_accordion_section:nth-child(4) h3{
+	background: #fff url(../../uploads/4.png) left center no-repeat; !important;
+ 	padding-left: 50px;
+ 	background-position-x: 8px;
+}
+.movilidad-titulos .wpb_accordion_section:nth-child(5) h3{
+	background: #fff url(../../uploads/5.png) left center no-repeat; !important;
+ 	padding-left: 50px;
+ 	background-position-x: 8px;
+}
+.movilidad-titulos .wpb_accordion_section:nth-child(6) h3{
+	background: #fff url(../../uploads/6.png) left center no-repeat; !important;
+ 	padding-left: 50px;
+ 	background-position-x: 8px;
+}
+.movilidad-titulos .wpb_accordion_section:nth-child(7) h3{
+	background: #fff url(../../uploads/7.png) left center no-repeat; !important;
+ 	padding-left: 50px;
+ 	background-position-x: 8px;
+}
+.movilidad-titulos .wpb_accordion_section:nth-child(8) h3{
+	background: #fff url(../../uploads/8.png) left center no-repeat; !important;
+ 	padding-left: 50px;
+ 	background-position-x: 8px;
+}
+.movilidad-titulos .wpb_accordion_section:nth-child(9) h3{
+	background: #fff url(../../uploads/9.png) left center no-repeat; !important;
+ 	padding-left: 50px;
+ 	background-position-x: 8px;
+}
+.movilidad-titulos .wpb_accordion_section:nth-child(10) h3{
+	background: #fff url(../../uploads/10.png) left center no-repeat; !important;
+ 	padding-left: 50px;
+ 	background-position-x: 8px;
+}
+.movilidad-titulos .wpb_accordion_section:nth-child(11) h3{
+	background: #fff url(../../uploads/111.png) left center no-repeat; !important;
+ 	padding-left: 50px;
+ 	background-position-x: 8px;
+}
 .wpb_accordion h3.wpb_accordion_header a 
 {
 	font-size: 24px;
+	padding-left: 0px !important;
 }
 
 @media (min-width: 768px) {
@@ -951,4 +1007,3 @@ article.gallery{
 		right: 0px;
 	}
 }
-

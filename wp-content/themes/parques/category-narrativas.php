@@ -18,12 +18,16 @@ get_header(); ?>
 					}
 					?>
 				</div>
-				<h1 class="titulo-principal">
-					Concurso de narrativas
-				</h1>
+				<div class="entrada-titulo">
+					<h1 class="titulo-principal-custom">
+						<span class="text-hidden"><?php the_title(); ?></span>
+						<img src="<?php echo get_bloginfo('template_url').'/images/narrativas.jpg'; ?>" alt="<?php the_title() ?>">
+					</h1>
+				</div>
 			</header><!-- .page-header -->
 			<section >
 				<?php
+					// Post seleccionado para salir de primero id 776
 					$first_post = get_post_field( 'post_content', 776 ,'display');
 					echo  $first_post;
 				?>
