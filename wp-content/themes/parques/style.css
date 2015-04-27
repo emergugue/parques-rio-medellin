@@ -766,7 +766,7 @@ article.gallery{
 		-webkit-border-radius: 0 0 10px 10px;
 		border-radius: 0 0 10px 10px;
 		padding: 10px;
-		width: 120px;
+		width: 185px;
 		margin-right: 16px;
 		height: 52px;
 		float: right;
@@ -806,6 +806,12 @@ article.gallery{
 	}
 	.redes-sociales ul li a.fb-header{
 		background-position: -60px 0;
+	}
+	.redes-sociales ul li a.ig-header{
+		background-position: -90px 0;
+	}
+	.redes-sociales ul li a.yt-header{
+		background-position: -120px 0;
 	}
 	.alcaldia-header{
 		clear: both;

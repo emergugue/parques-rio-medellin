@@ -36,6 +36,8 @@
 								<li><a href="mailto:parquedelriomedellin@gmail.com" class="mail-header" target="_blank"></a></li>
 								<li><a href="https://www.facebook.com/AmigosdelParquedelRioMedellin" class="tw-header" target="_blank"></a></li>
 								<li><a href="https://twitter.com/ParquesdelRio" class="fb-header" target="_blank"></a></li>
+								<li><a href="https://instagram.com/ParquesdelRio" class="ig-header" target="_blank"></a></li>
+								<li><a href="https://www.youtube.com/channel/UCaNo9sd_jhWkdZetXzrKajw" class="yt-header" target="_blank"></a></li>
 							</ul>
 						</div>
 						<div class="alcaldia-header">
