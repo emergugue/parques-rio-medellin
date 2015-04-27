@@ -28,7 +28,7 @@ get_header(); ?>
 			<section >
 				<?php
 					// Post seleccionado para salir de primero id 776
-					$first_post = get_post_field( 'post_content', 776 ,'display');
+					$first_post = get_post_field( 'post_content', 358 ,'display');
 					echo  $first_post;
 				?>
 			</section>
