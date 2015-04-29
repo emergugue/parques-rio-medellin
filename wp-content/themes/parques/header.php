@@ -48,42 +48,9 @@
 
 			</div>
 
-			<nav id="menu-principal" class="navbar navbar-default" role="navigation">
-				 <div>
-				 	<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-inicio">
-					    <span class="sr-only">Toggle navigation</span>
-					    <span class="icon-bar"></span>
-					    <span class="icon-bar"></span>
-					    <span class="icon-bar"></span>
-					  </button>
-					  <span class="hidden-sm hidden-md hidden-lg navbar-brand collapsed" data-toggle="collapse" data-target="#barra-inicio" >Menú</span>
-					</div>
-
-				 	<!-- Collect the nav links, forms, and other content for toggling -->
-	    			<div class="collapse navbar-collapse row-fluid" id="barra-inicio">
-					 	<?php
-					 	
-							wp_nav_menu(
-										array(
-											'theme_location' => 'main-menu',
-											'menu_class' => 'nav navbar-nav',
-											'container_class' => 'menu-menu-principal-container col-sm-8' 
-											)
-										); 
-						
-						?>
-						<div class="col-sm-4">
-							<form id="form-search" class="navbar-form navbar-right" role="search">
-				        		 <?php get_search_form(); ?>
-				      		</form>	
-				      	</div>
-
-					</div><!--end navbar-collapse -->
-
-				 </div><!-- end container-fluid -->
-			</nav>
+			<?php
+				bt2_menu();
+			?>
 		</div>
 	</header>
 

@@ -25,6 +25,7 @@ class Widget_Narrativas extends WP_Widget
 	{
 		extract($args);
 		echo $before_widget;
+		define('get_cat_ID','');
 		?>
 
 		<nav class="menu-nav">

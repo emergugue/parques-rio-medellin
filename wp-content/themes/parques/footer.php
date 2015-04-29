@@ -15,9 +15,9 @@
 					</ul>
 				</div>
 				<div class="col-sm-4">
-					<div class="logo-footer">
-						
-					</div>
+					<a href="https://www.medellin.gov.co" target="_blank">
+						<div class="logo-footer"></div>
+					</a>
 				</div>
 			</div>
 			<div class="row" >

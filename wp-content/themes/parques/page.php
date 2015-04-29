@@ -16,16 +16,17 @@
 	</div>
 	<h1 class="titulo-principal">
 
-		<?php if (is_category())
+		<?php if (is_category() )
 		{
 			single_cat_title() ;
+
 		} elseif (is_tag()) 
 		{
 			single_tag_title();
 		} 
-		elseif (is_author()) 
+		elseif (is_page()) 
 		{
-			get_the_author_meta('display_name');
+			the_title() ;
 
 		} elseif (is_day()) 
 		{

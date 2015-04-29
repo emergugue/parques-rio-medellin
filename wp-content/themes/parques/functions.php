@@ -366,5 +366,58 @@ function get_class_narrativas()
 	{
 		return null;
 	}
+}
 
+/**
+* custon_nav_class
+* filtro ejecutado desde bt_menu
+*
+**/
+function custom_nav_class($classes, $item)
+{
+    if(array_search("menu-item-has-children", $classes) && !$item->menu_item_parent)
+    {
+        $classes[] = "dropdown";
+    }
+
+    return $classes;
+}
+
+function bt2_menu()
+{
+	add_filter('nav_menu_css_class' , 'custom_nav_class' , 10 , 2);
+	$menu = wp_nav_menu(
+		array(
+			'theme_location' => 'main-menu',
+			'menu_class' => 'nav navbar-nav',
+			'container_class' => 'menu-menu-principal-container col-sm-9',
+			'echo' => false
+		)
+	);
+
+	$rp_menu = str_replace('dropdown"><a','dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"', $menu);
+	$rp_menu = str_replace('class="sub-menu"','class="sub-menu dropdown-menu"', $rp_menu);
+	$rp_menu = str_replace(array("\r\n", "\r", "\n"), "", $rp_menu);
+	$rp_menu = str_replace(array('</a><ul class="sub-menu'),'<span class="caret"></span></a><ul class="sub-menu', $rp_menu);
+
+	// Bootstrap estrucure
+	echo '<nav id="menu-principal" class="navbar navbar-default" role="navigation">'
+			.'<div class="navbar-header">'
+				.'<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-inicio">'
+					.'<span class="sr-only">Toggle navigation</span>'
+					.'<span class="icon-bar"></span>'
+					.'<span class="icon-bar"></span>'
+					.'<span class="icon-bar"></span>'
+				.'</button>'
+				.'<span class="hidden-sm hidden-md hidden-lg navbar-brand" data-toggle="collapse" data-target="#barra-inicio" >Menú</span>'
+			.'</div>'
+			.'<div id="barra-inicio" class="collapse navbar-collapse row-fluid">'
+				.$rp_menu
+				.'<div class="col-sm-3">'
+					.'<form id="form-search" class="navbar-form navbar-right" role="search">'
+				      	.get_search_form(false)
+				    .'</form>'
+			  	.'</div>'
+			.'</div>'
+		.'</nav>';
 }
