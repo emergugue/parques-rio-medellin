@@ -746,7 +746,7 @@ article.gallery{
 	height: auto;
 	vertical-align: middle;
 	border: 0;
-	height: 210px;
+	height: 225px;
 	overflow: hidden;
 }
 
@@ -785,7 +785,7 @@ article.gallery{
 	background-image:none !important;
 }
 .menu-item .sub-menu .menu-item{
-	font-size: 1em;
+	font-size: 0.8em;
 }
 
 @media (min-width: 768px) {
@@ -808,9 +808,6 @@ article.gallery{
 		background-color: none !important;
 		border: none !important;
 	}
-	.menu-item .sub-menu .menu-item {
-		font-size: 1.3em;
-	}
 	.header-content{
 		background: url(images/header-bg.jpg) no-repeat top center;
 		/*margin-left: 0px !important;
@@ -832,7 +829,7 @@ article.gallery{
 		-webkit-border-radius: 0 0 10px 10px;
 		border-radius: 0 0 10px 10px;
 		padding: 10px;
-		width: 185px;
+		width: 170px;
 		margin-right: 16px;
 		height: 52px;
 		float: right;
@@ -897,8 +894,8 @@ article.gallery{
 	}
 	.navbar-default .navbar-nav>li>a {
 		border-bottom: none;
-		padding: 20px 9px;
-		font-size: 1em;
+		padding: 20px 8px;
+		font-size: 0.8em;
 	}
 	.navbar-default .navbar-nav>li>a:hover{
 		background-color: #0087db !important;
@@ -992,6 +989,22 @@ article.gallery{
 	form.navbar-form {
 		width: 100%;
 	}
+	.menu-item .sub-menu .menu-item {
+		font-size: 1em;
+	}
+	.article header time {
+		font-size: 1em;
+	}
+	.title-article2 {
+		font-size: 1.4em;
+	}
+	.footer-article div a {
+		font-size: 1.1em !important;
+	}
+	article .entrada-contenido div div div .wpb_wrapper .vc_grid-container div div div.vc_grid-item {
+		padding-right:2px;
+		padding-bottom:2px;
+	}
 @media (min-width: 992px){
 /*----------------Header content-------------*/
 	#main-logo a {
@@ -1014,11 +1027,8 @@ article.gallery{
 	}
 	.navbar-default .navbar-nav>li>a {
 		border-bottom: none;
-		padding: 20px 13px;
-		font-size: 1.3em;
-	}
-	form.navbar-form{
-	width: 100%;
+		padding: 20px 10px;
+		font-size: 1.1em;
 	}
 	#widget-home article figure{
 		height: 175px;
@@ -1054,20 +1064,32 @@ article.gallery{
 	form.navbar-form {
 		width: 100%;
 	}
+	.menu-item .sub-menu .menu-item {
+		font-size: 1.1em;
+	}
+	.article header time {
+		font-size: 1em;
+	}
+	.title-article2 {
+		font-size: 1.4em;
+	}
+	.footer-article div a {
+		font-size: 1.3em !important;
+	}
+	article .entrada-contenido div div div .wpb_wrapper .vc_grid-container div div div.vc_grid-item {
+		padding-right:2px;
+		padding-bottom:2px;
+	}
 }
 @media (min-width: 1200px){
 	.navbar-default .navbar-nav>li>a {
 		border-bottom: none;
-		padding: 20px 21px;
+		padding: 20px 18px;
 	}
 	.header-content{
 		-webkit-background-size: cover;
 		background-size: cover;
 	}
-	form.navbar-form{
-		width: 80%;
-	}
-	
 	#widget-home article figure{
 		height: 225px;
 		overflow: hidden;
@@ -1084,7 +1106,23 @@ article.gallery{
 	.sidebar #hey_its_flickr-2 #flickr-images  a.next {
 		right: 0px;
 	}
-	form.navbar-form {
+	form.navbar-form{
 		width: 100%;
+	}
+	.menu-item .sub-menu .menu-item {
+		font-size: 1.1em;
+	}
+	.article header time {
+		font-size: 1.1em;
+	}
+	.title-article2 {
+		font-size: 1.9em;
+	}
+	.footer-article div a {
+		font-size: 1.8em !important;
+	}
+	article .entrada-contenido div div div .wpb_wrapper .vc_grid-container div div div.vc_grid-item {
+		padding-right:2px;
+		padding-bottom:2px;
 	}
 }

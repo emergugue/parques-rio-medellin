@@ -234,7 +234,7 @@ class Download_Attachments {
 			'type'		 => __( 'File type', 'download-attachments' ),
 			'icon'		 => __( 'Icon', 'download-attachments' ),
 			'size'		 => __( 'Size', 'download-attachments' ),
-			'date'		 => __( 'Fecha', 'download-attachments' ),
+			'date'		 => __( 'Date added', 'download-attachments' ),
 			'downloads'	 => __( 'Downloads', 'download-attachments' )
 		);
 	}

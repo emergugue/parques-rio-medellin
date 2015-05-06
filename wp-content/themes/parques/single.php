@@ -42,7 +42,7 @@ get_header(); ?>
 		<div>
 			<?php if( in_category( 2 ) ): ?>
 			<div class="comments"> 
-				<?php  echo do_shortcode('[vivafbcomment]'); ?>
+				<?php  echo do_shortcode('[vivafbcomment count="off"]'); ?>
 			</div>
 			<?php endif; ?>
 
