@@ -7,7 +7,7 @@
 * @link http://codex.wordpress.org/Template_Hierarchy
 **/
 
-wp_enqueue_script('jquery-ui-datepicker');
+wp_enqueue_script('wp_enqueue_scripts');
 
 get_header();
 
@@ -33,12 +33,9 @@ foreach ($dataParent as $parent)
 $select .= '</select>';
 
 ?>
-
 <div id="primary">
 	<div class="site-content <?php echo $col ?>" role="main">
-
 	<?php if (have_posts()): ?>
-
 		<header class="page-header">
 			<div class="breadcrumbs">
 				<?php if(function_exists('bcn_display'))
@@ -47,7 +44,6 @@ $select .= '</select>';
 				}
 				?>
 			</div>
-
 			<div class="panel panel-default">
 				<h3 class="titulo-principal" style="margin: 0px;border-right:0px;">
 					Puedes usar los siguientes filtros para las noticias
@@ -79,7 +75,6 @@ $select .= '</select>';
 				</div>
 			</div>
 			<div style="clear:both;"></div>
-
 			<h1 class="titulo-principal">
 			<?php
 				if (is_category())
@@ -90,13 +85,11 @@ $select .= '</select>';
 			</h1>
 		</header>
 		<!-- .page-header -->
-
 		<div class="content-main">
 			<?php while ( have_posts() ) : the_post() ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 		</div>
-
 		<div class="pag">
 			<?php
 			/* paginacion marca telemedellin */
@@ -106,122 +99,17 @@ $select .= '</select>';
 			}
 			?>
 		</div>
-
 	<?php else : ?>
 		<h1>No existe contenido relacionado</h1>
 	<?php endif; ?>
 	</div>
 	<!-- #content -->
-
 	<?php if( $widgetArea): ?>
 		<!-- Bloque oculto en moviles. -->
 		<div class="sidebar hidden-xs  col-sm-4"><?php dynamic_sidebar('sidebar');?></div>
 	<?php endif; ?>	
-
 </div>
 <!-- #primary -->
-
 <?php get_footer(); ?>
-
 <script>
-	var $ = jQuery;
-	$('#filtro').on('keypress', function() {
-		$('#btnFiltrar').trigger('click');
-	});
-
-    $('#txtDesde').datepicker({
-        dateFormat: 'yy-mm-dd',
-        //buttonImage: 'calendar.png'
-    });
-
-    $('#txtHasta').datepicker({
-        dateFormat: 'yy-mm-dd',
-        //buttonImage: 'calendar.png'
-    });
-
-    function validarRangos()
-    {
-    	var fechaInicio = $('#txtDesde').val();
-    	var fechaFin = $('#txtHasta').val();
-
-    	if ((fechaInicio!=='') && (fechaFin!==''))
-    	{
-			$('.error > ul > li#fechaInicio').remove();
-			$('.error > ul > li#fechaFin').remove();
-			$('.error > ul > li#fechas').remove();
-
-    		return true;
-    	}
-    	else
-    	{
-    		mostrarMensaje(fechaInicio, fechaFin);
-
-			return false;
-    	}
-    }
-
-    function mostrarMensaje(fechaInicio, fechaFin)
-    {
-		if ((fechaInicio==='') && (!$('#fechaInicio').length))
-		{
-			$('.error > ul').css({
-				color:'red',
-				margin:'20px 0px 0px 0px'
-			}).append("<li id='fechaInicio'>Por favor seleccione la fecha de inicio.</li>");
-		}
-
-		if ((fechaFin==='') && (!$('#fechaFin').length))
-		{
-			$('.error > ul').css({
-				color:'red',
-				margin:'20px 0px 0px 0px'
-			}).append("<li id='fechaFin'>Por favor seleccione la fecha de fin.</li>");
-		}
-    }
-
-    function validarFechas()
-    {
-    	var fechaInicio = $('#txtDesde').val().split('-');
-    	fechaInicio = fechaInicio.join('');
-
-    	var fechaFin = $('#txtHasta').val().split('-');
-    	fechaFin = fechaFin.join('');
-
-    	if (fechaInicio > fechaFin)
-    	{
-			$('.error > ul').css({
-				color:'red',
-				margin:'20px 0px 0px 0px'
-			}).append("<li id='fechas'>La fecha de inicio no puede ser mayor a la fecha final.</li>");
-
-			return false;
-    	}
-    	else
-    		return true;
-    }
-
-	$('#btnFiltrar').on('click', function(evt)
-	{
-		if (validarRangos() && validarFechas())
-		{
-			$.ajax({
-				method: "POST",
-				url: "wp-content/themes/parques/content-category-noticias.php",
-				data: $('#filtro').serialize(),
-				success: function(data)
-				{
-					var obj = JSON.parse(data);
-
-					$('.content-main').html(obj.content);
-					$('.pag').html(obj.pag);
-				},
-				error: function(jqXHR, textStatus, errorThrown)
-				{
-					console.log(errorThrown);
-				}
-			});
-		}
-		else
-			evt.stopPropagation();
-	});
 </script>

@@ -211,6 +211,8 @@ function parques_scripts()
 	//add scripts boostrap , con la opcion de cargar al final.
 	wp_enqueue_script('bootstrap.min', get_template_directory_uri().'/bootstrap-3.2.0/js/bootstrap.min.js',false,'3.2.0',true);
 
+	wp_enqueue_script('jquery-ui-datepicker');
+
 	//scripts genericos de la aplicacion
 	wp_enqueue_script('script', get_template_directory_uri().'/js/script.js',false,'1.0',true);
 } 
