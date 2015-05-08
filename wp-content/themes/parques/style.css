@@ -10,20 +10,20 @@ h1, h2, h3, h4, h5, h6{
 	font-family: 'Yanone Kaffeesatz', sans-serif !important;
 }
 img{
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 }
 
 /*--------------Header styles-----------------*/
-#main-logo a 
-{ 
+#main-logo a
+{
 	width: 80%;
 	display: block;
 	height: auto;
 	margin: 0 auto;
 }
 #main-logo a img
-{ 
+{
 	width: 100%;
 }
 /*Menú*/
@@ -108,9 +108,9 @@ form.navbar-form button.btn.btn-default{
 #narrativas-2 .menu-nav {
     background-color: #0175be;
     border:none;
-    border-radius:7px; 
-	-moz-border-radius:7px; /* Firefox */ 
-	-webkit-border-radius:7px; /* Safari y Chrome */ 
+    border-radius:7px;
+	-moz-border-radius:7px; /* Firefox */
+	-webkit-border-radius:7px; /* Safari y Chrome */
 }
 
 #narrativas-2 .menu-nav ul {
@@ -122,7 +122,7 @@ form.navbar-form button.btn.btn-default{
 }
 
 #narrativas-2 .menu-nav ul li{
-	margin: 10px 0; 
+	margin: 10px 0;
 	color: #FFFFFF;
 	font-size: 1.6em;
     font-weight: 700;
@@ -258,7 +258,7 @@ footer p{
 	background-color: #1E66A1 !important;
 }
 /*Fin banner home*/
-.site-content .page-title 
+.site-content .page-title
 {
 	text-align: center;
 	background-color: #0272BE ;
@@ -529,7 +529,7 @@ overflow: auto;
     margin-top: 25px;
     margin-bottom: 25px;
 }
- 
+
 #error-404
 {
 	margin: auto;
@@ -719,7 +719,7 @@ article.gallery{
  	padding-left: 50px;
  	background-position-x: 8px;
 }
-.wpb_accordion h3.wpb_accordion_header a 
+.wpb_accordion h3.wpb_accordion_header a
 {
 	font-size: 24px;
 	padding-left: 0px !important;
